@@ -50,11 +50,13 @@ __Equivalence Relation__
 
 ##### Reflexive
 Let a ∈ Z then a ≡ a(mod m)
+
 __Proof__
 a-a = 0, and m divided 0
 
 ##### Symmetric
 If a,b ∈ Z such that a ≡ b(mod m) then b ≡ a(mod m)
+
 __Proof__
 Assume a ≡ b(mod m) that implies m divides a-b
 There is an integer K such that mK = a-b
