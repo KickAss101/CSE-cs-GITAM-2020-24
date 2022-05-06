@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SEM IV/OS/Module 2.md",
+            "file": "SEM IV/CN/CN 2.md",
             "mode": "preview",
             "source": false
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SEM IV/OS/Module 2.md",
+                "file": "SEM IV/CN/CN 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,15 +90,15 @@
   },
   "active": "4e85459857c72789",
   "lastOpenFiles": [
-    "SEM IV/OS/Module 2.md",
-    "SEM IV/OS/Module 1.md",
-    "SEM IV/OS/LmpwZw.webp",
-    "SEM IV/OS/OS_Module 2_3.pdf",
-    "SEM IV/OS/unit 2 class 3 process schudling.pdf",
-    "SEM IV/Maths IV/Module 1.md",
-    "SEM IV/CN/Module 1.md",
-    "SEM IV/CDS/Module 4.md",
-    "SEM IV/CDS/Module 2.md",
-    "SEM IV/CDS/Module 1.md"
+    "SEM IV/CN/CN 2.md",
+    "SEM IV/CN/CN 4.md",
+    "SEM IV/CN/CN 3.md",
+    "SEM IV/CN/CN 1.md",
+    "SEM IV/CN/CN 5.md",
+    "SEM IV/COA/COA 2.md",
+    "SEM IV/COA/COA 4.md",
+    "SEM IV/COA/COA 3.md",
+    "SEM IV/COA/COA 1.md",
+    "SEM IV/OS/OS 2.md"
   ]
 }

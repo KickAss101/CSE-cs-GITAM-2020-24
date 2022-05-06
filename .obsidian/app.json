@@ -1,4 +1,10 @@
 {
   "foldHeading": false,
-  "legacyEditor": false
+  "legacyEditor": false,
+  "alwaysUpdateLinks": true,
+  "spellcheckLanguages": [
+    "en-US",
+    "en-GB"
+  ],
+  "spellcheck": true
 }
