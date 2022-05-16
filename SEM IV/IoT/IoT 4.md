@@ -78,7 +78,7 @@ __Reserved private IPv4 network ranges__
 	- The priority values indicate preference; the lower 'priority' value is preferred.
 
 |example.com|record type|priority|value|TTL|
-|-|-|-|-|
+|-|-|-|-|-|
 |@|MX|10|mailhost1.example.com|45000|
 |@|MX|20|mailhost2.example.com|45000|
 
