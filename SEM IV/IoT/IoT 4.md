@@ -50,11 +50,13 @@ __Reserved private IPv4 network ranges__
 	- If the server is up, it replies with SYN-ACK packet which means synchronization is acknowledged and asks for the client to open a connection
 	-  The client replies with ACK (acknowledgement) with a connection open
 	- Then the two way connection is established
-	<img src=a2VfMV8ucG5n.webp width=500>
-	<img src=Y2Vzcy5wbmc.webp width=500>
+	
+![500](a2VfMV8ucG5n.webp)
+	
+![500](Y2Vzcy5wbmc.webp)
 
 #### TCP/IP Suite
-<img src=LmpwZw.webp width=500>
+![500](LmpwZw.webp)
 
 #### UDP
 #### IP Addresses
@@ -70,7 +72,7 @@ __Reserved private IPv4 network ranges__
 	- Canonical name is an alternative record or alias that maps one domain name to another.
 	- Oftentimes, when sites have subdomains such as blog.example.com or shop.example.com, those subdomains will have CNAME records that point to a root domain (example.com). This way if the IP address of the host changes, only the DNS "A" record for the root domain needs to be updated and all the CNAME records will follow along with whatever changes are made to the root.
 
-![[627d639cbbc41b8058488033_A_RECORD_DNS_EXAMPLE.png | 300]]
+![300](627d639cbbc41b8058488033_A_RECORD_DNS_EXAMPLE.png)
 - __Mail Exchange (MX)__
 	[YouTube - MX Record](https://www.youtube.com/watch?v=aWWZ85UAsCg&t=135s&ab_channel=GoogleWorkspace)
 	- MX record identifies mail servers for a domain name 
