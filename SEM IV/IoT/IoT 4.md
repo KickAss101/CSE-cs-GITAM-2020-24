@@ -50,11 +50,11 @@ __Reserved private IPv4 network ranges__
 	- If the server is up, it replies with SYN-ACK packet which means synchronization is acknowledged and asks for the client to open a connection
 	-  The client replies with ACK (acknowledgement) with a connection open
 	- Then the two way connection is established
-	![[a2VfMV8ucG5n.webp |500]]
-	![[Y2Vzcy5wbmc.webp | 500]]
+	<img src=a2VfMV8ucG5n.webp width=500>
+	<img src=Y2Vzcy5wbmc.webp width=500>
 
 #### TCP/IP Suite
-![[SEM IV/IoT/LmpwZw.webp | 500]]
+<img src=LmpwZw.webp width=500>
 
 #### UDP
 #### IP Addresses
