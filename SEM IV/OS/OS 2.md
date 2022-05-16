@@ -33,7 +33,7 @@ __Thread:__ A thread is the unit of execution within a process.
 >- As a process executes, it changes state
 >- The state of a process is defined in part by the current activity of that process
 
-![](LmpwZw.webp)
+![](process_state.webp)
 - __New:__ The process  is being created
 - __Ready:__ The process is waiting to be assigned to a processor
 - __Running:__ Instructions are being executed
