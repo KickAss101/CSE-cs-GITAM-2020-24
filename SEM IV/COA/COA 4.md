@@ -58,4 +58,16 @@ __Input/Output Devices:__ An input/output device is a hardware device that has t
 ---
 ### I/O Interface
 [Geeksforgeeks - blog](https://www.geeksforgeeks.org/introduction-to-input-output-interface/)
+
+__Input-Output Interface__ is used as an method which helps in transferring of information between the internal storage devices i.e. memory and the external peripheral device .
+
+__The need for I/O interface (or) Major differences between CPU and peripherals__
+- The nature of peripheral devices is electromagnetic and electro-mechanical. The nature of the CPU is electronic. There is a lot of _difference in the mode of operation of both peripheral devices and CPU_.
+- There is also synchronization mechanism because the _data transfer rate of peripheral devices are slow than CPU_.
+- There is a _difference in the data code and formats_ are between CPU and memory.
+- The _operating mode of each peripheral device can be different from each other_. So as not to disturb the operation of other peripheral devices connected to CPU, we use I/O interface.
+
+__Block diagram of I/O Interface__
 ![[interface1.png | 600]]
+
+- __Address__ is used to 
