@@ -57,3 +57,4 @@ __Input/Output Devices:__ An input/output device is a hardware device that has t
 
 ---
 ### I/O Interface
+![[interface1.png | 600]]
