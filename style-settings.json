@@ -3,12 +3,10 @@
   "blue-topaz-theme@@background-primary-alt-bg-4-bt@@dark": "#222222",
   "blue-topaz-theme@@background-secondary-bg-4-bt@@dark": "#222222",
   "blue-topaz-theme@@background-modifier-border@@dark": "#222222",
-  "blue-topaz-theme@@font-family-change-to-default": true,
-  "blue-topaz-theme@@font-family-preview-edit-code": "'Fira code'",
+  "blue-topaz-theme@@font-family-change-to-default": false,
   "blue-topaz-theme@@font-family-inline-code": "'Fira code'",
   "blue-topaz-theme@@tag3@@dark": "#17A5E7",
   "blue-topaz-theme@@text-color-code@@dark": "#BDBDBD",
-  "blue-topaz-theme@@fix-right-ribbon": true,
   "blue-topaz-theme@@layout-style-options": "layout-style-options-rectangle",
   "blue-topaz-theme@@hide-vault-name": true,
   "blue-topaz-theme@@bt-status-off": true,
@@ -22,5 +20,6 @@
   "blue-topaz-theme@@h4-toggle-underline": false,
   "blue-topaz-theme@@h3-text-align-settings": "h3-text-align-center",
   "blue-topaz-theme@@h5-color@@dark": "#FF0000",
-  "blue-topaz-theme@@list-style-change-options": "list-vertical-line-three"
+  "blue-topaz-theme@@list-style-change-options": "list-vertical-line-three",
+  "blue-topaz-theme@@tag5@@dark": "#4000FF"
 }

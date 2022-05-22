@@ -25,6 +25,8 @@ __Learning Outcomes__
 ___Image is only for understanding purposes, not necessarily in the topic___
 __How modern computers work__
 ![[Figure2.png | 300]]
+__Reference Links__
+[uci - notes](https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/8_MainMemory.html)
 
 ---
 ### Memory Management
@@ -35,7 +37,12 @@ ___68451 MMU could be used with the Motorola 68010 (old MMU)___
 
 __Memory management unit__ (MMU) is the physical hardware that maps virtual/logical memory space to the physical memory. The MMU is usually located within the computer’s central processing unit (CPU), but sometimes operates in a separate integrated chip (IC). All data request inputs are sent to the MMU, which in turn determines whether the data needs to be retrieved from RAM or ROM storage.
 - The MMU also includes a _section of memory_ that holds a table that matches virtual addresses to physical addresses, called the _translation lookaside buffer_ (TLB).
-
+- User _processes must be restricted_ so that they only access memory locations that belong to that particular process. 
+- This is usually implemented using a _base register and a limit register_ for each process.
+- A base and a limit register _define a logical address space_
+- The base register holds the smallest legal physical memory address and limit register specifies the size of the range.
+- Every memory access made by a user process is checked against these two registers, and if a memory access is attempted outside the valid range, then a _fatal error is generated_.
+![[8_01_LogicalAddressSpace.jpg | 300]]
 __MMU performs three major functions__
 -   Hardware memory management
 	- It deals with a system's _RAM and cache memory_
