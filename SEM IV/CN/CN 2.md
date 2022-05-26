@@ -38,11 +38,13 @@ __Process Communicating__
 	- Socket is an interface between the Application layer and Transport layer
 - __Addressing Processes__
 	- In a network, a host is identified by it's _IP address & a port_ number to identify the process that is in communication.
+	![[bigPic.jpg | 500]]
 
 __Transport Service Available to application__
 
 
 __Transport service provided by internet__
+
 
 __Application layer protocol__
 

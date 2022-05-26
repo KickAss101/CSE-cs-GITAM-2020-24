@@ -8,3 +8,11 @@ __Learning Outcomes__
 
 ---
 ### Symmetric Cipher Model
+
+
+#### Playfair Cipher
+![[Pasted image 20220526204801.png]]
+
+
+
+
