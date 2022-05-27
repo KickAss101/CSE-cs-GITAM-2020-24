@@ -47,16 +47,20 @@ __Transport Service Available to application__
 We can broadly classify the possible services along four dimensions: reliable data transfer, throughput, timing, and security.
 
 - __Reliable Data Transfer__
-	- If the data sent by one end of the application is _delivered correctly and completely_ to the other end of the application. If a protocol provides such a guaranteed data delivery service, it is said to provide **reliable data transfer**.
-	- This may be acceptable for **loss-tolerant applications**, most notably multimedia applications such as conversational audio/video that can tolerate some amount of data loss.
+	- If a protocol provides a guaranteed data delivery service _correctly and completely_ to the other end of the application then it is said to provide **reliable data transfer**.
+	- The applications like multimedia applications such as conversational audio/video can tolerate some amount of data loss, such application are called as __loss-tolerant applications__.
 - __Throughput__
-	- A transport-layer protocol could also provide the _service at guaranteed available throughput at some specified rate_.
-	- The _application could request_ a **guaranteed** throughput of r bits/sec. Applications that have throughput requirements are said to be **bandwidth-sensitive** applications.
+	- >The amount of data moved _completely and successfully_ from one place to another in a given time period is called throughput
+
+	- Transport-layer protocol could provide _guaranteed available throughput at some specified rate_.
+	- With such a service, the _application could request_ a **guaranteed** throughput of r bits/sec and the transport protocol would then ensure that the available throughput is always at least r  bits/sec. 
+	- Applications that have throughput requirements are said to be **bandwidth-sensitive** applications.
 	- The available throughput can fluctuate with time.
 	- Elastic applications can make use of as much, or as little, throughput as happens to be available. For example, e-mail, file transfer, and Web transfers.
+
 - __Timing__
-	- A transport-layer protocol can also provide timing guarantees. Every bit that the sender pumps into the socket arrives at the receiver’s socket no more than 100 msec later.
-	- Real-time applications, such as Internet telephony, virtual environments, teleconferencing, and multiplayer games.
+	- A transport-layer protocol can also provide timing guarantees. 
+	- Interactive real-time applications, such as Internet telephony, virtual environments, teleconferencing, and multiplayer games _require tight timing constraints on data delivery_ in order to be effective.
 - __Security__
 	- A transport protocol can _encrypt all data transmitted by the sending process_, and in the receiving host, the transport-layer protocol can decrypt the data before delivering the data to the receiving processes. 
 	- A transport protocol can also provide other security services in addition to _confidentiality, including data integrity and end-point authentication_.
