@@ -65,12 +65,25 @@ We can broadly classify the possible services along four dimensions: reliable da
 	- A transport protocol can _encrypt all data transmitted by the sending process_, and in the receiving host, the transport-layer protocol can decrypt the data before delivering the data to the receiving processes. 
 	- A transport protocol can also provide other security services in addition to _confidentiality, including data integrity and end-point authentication_.
 
-__Transport service provided by internet__
+![[Requirements+of+Selected+Network+Applications.jpg | 500]]
 
+__Transport service provided by internet__
+- The Internet makes two transport protocols available to applications, UDP and TCP.
+- __TCP__ service model includes a _connection-oriented service and a reliable data transfer service_
+	- __Connection-oriented service:__ After the handshaking phase, a **TCP connection** is said to exist between the sockets of the two processes. The connection is a full-duplex connection in that the two processes can send messages to each other over the connection at the same time. When the application finishes sending messages, it must tear down the connection.
+	- __Reliable data transfer service:__ The communicating processes can rely on TCP to deliver all data sent without error and in the proper order.
+	- TCP also includes a congestion-control mechanism.
+- __UDP__ 
+	- UDP is _connectionless_, so there is _no handshaking_ before the two processes start to communicate. 
+	- UDP provides an _unreliable data transfer service_—that is, when a process sends a message into a UDP socket, UDP provides no guarantee that the message will ever reach the receiving process. 
+	- UDP does not include a congestion-control mechanism (so the sending side of UDP can pump data into the layer below (the network layer) at any rate it pleases)
 
 __Application layer protocol__
-
-
+- An application-layer protocol defines _how an application’s processes, running on different end systems, pass messages to each other_. It defines:
+- The types of messages exchanged, for example, request messages and response messages
+- The syntax of the various message types, such as the fields in the message and how the fields are delineated
+- The semantics of the fields, that is, the meaning of the information in the fields
+- Rules for determining when and how a process sends messages and responds to messages.
 ---
 ### The Web and HTTP
 
