@@ -101,8 +101,7 @@ __Application layer protocol__
 - __HTTP__ stands for HyperText Transfer Protocol, an application layer protocol
 - It is implemented in two programs: server program and client program
 - The client and server communicate with each other by exchanging HTTP messages
--  HTTP _defines the structure of these messages and how the  
-client and server exchange the messages_.
+-  HTTP _defines the structure of these messages and how the client and server exchange the messages_.
 - When a user requests a Web page, the browser sends HTTP request message for the objects in the page to the server. The server receives the requests and responds with HTTP response messages that contain the objects.
 - HTTP uses _TCP as it's underlying transport protocol_. The HTTP client first initiates a TCP connection with server. Once the connection is established, the _browser and the server processes access TCP through their socket interfaces_.
 - HTTP is a _stateless protocol_ because it doesn't store any state information about the client.
@@ -111,7 +110,24 @@ client and server exchange the messages_.
 	- Non-persistent HTTP (Separate TCP connection)
 	- Persistent HTTP (Same TCP connection)
 - __Non-persistent HTTP__
-	- 
+	- The HTTP _client process initiates a TCP connection to the server on port number 80_, which is the default port number for HTTP. Associated with the TCP connection, there will be a socket at the client and a socket at the server.
+	- The HTTP _client sends an HTTP request message to the server via its socket_. The request message includes the path name for the resource. 
+	- The HTTP server process receives the request message via its socket, retrieves the object from its storage (RAM or disk), _encapsulates the object in an HTTP response message, and sends the response message_ to the client via its socket.  
+	- The HTTP _server process tells TCP to close the TCP connection_.  
+	- The HTTP _client receives the response message. The TCP connection terminates._ The message indicates that the encapsulated object is an HTML file. The client extracts the file from the response message, examines the HTML file, and finds references to the remaining resources like images, videos etc.  
+	- The _first four steps are then repeated for each of the referenced objects_.
+	- ![[kurose_320719_c02f07-1.gif | 380]]
+	- Round-trip time (RTT) is the _time it takes for a small packet to travel from client to server and then back to the client_. 
+	- The RTT includes _packet-propagation delays, packet queuing delays_ in intermediate routers and switches, and _packet-processing delays_.  
+	- When a user clicks on a hyperlink, the browser initiate a TCP connection between the browser and the Web server; this involves a “three-way handshake”—the client sends a small  TCP segment to the server, the server acknowledges and responds with a small TCP segment, and, finally, the client acknowledges back to the server.
+	- The _first two parts of the three way handshake take one RTT_.  
+	- After completing the first two parts of the handshake, the _client sends the HTTP request message combined with the third part of the three-way handshake_ (the acknowledgment) into the TCP connection.  
+	- Once the request message arrives at the server, the _server sends the HTML file into the TCP connection_. This HTTP request/response eats up another RTT. Thus, roughly, the _total response time is two RTTs plus the transmission time_ at the server of the HTML file.
+- __Persistent HTTP__
+	- A _brand-new connection must be established and maintained for each requested object_. For each of these connections, _TCP buffers must be allocated and TCP variables must be kept in both the client and server_. This can place a _significant burden on the Web server_, which may be serving requests from hundreds of different clients simultaneously.  
+	- _Each object suffers a delivery delay of two RTTs— one RTT to establish the TCP connection and one RTT to request and receive an object._ With persistent connections, the server leaves the _TCP connection open after sending a response_. 
+	- _Subsequent requests and responses between the same client and server can be sent over the same connection_ which reduces latency in subsequent requests(no handshaking and no slow start). Reduced CPU usage and round-trips because of fewer new connections. In particular, an _entire Web page can be sent over a single persistent TCP connection_. 
+	- Moreover, multiple Web pages residing on the same server can be sent from the server to the same client over a single persistent TCP connection.
 
 
 
