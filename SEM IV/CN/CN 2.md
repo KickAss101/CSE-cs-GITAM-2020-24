@@ -64,6 +64,7 @@ We can broadly classify the possible services along four dimensions: reliable da
 - __Security__
 	- A transport protocol can _encrypt all data transmitted by the sending process_, and in the receiving host, the transport-layer protocol can decrypt the data before delivering the data to the receiving processes. 
 	- A transport protocol can also provide other security services in addition to _confidentiality, including data integrity and end-point authentication_.
+	-  ___Just for example:___
 
 ![[Requirements+of+Selected+Network+Applications.jpg | 500]]
 
@@ -86,6 +87,34 @@ __Application layer protocol__
 - Rules for determining when and how a process sends messages and responds to messages.
 ---
 ### The Web and HTTP
+#### Brief note on Web
+[YouTube - Web&HTTP](https://www.youtube.com/watch?v=jRM5ShKyIWI&ab_channel=DarshanUniversity)
+- In the early 1990s, the internet was used only by researchers, academics and in universities.
+- In 1989, Tim Berners-Lee invented _World Wide Web_
+- The World Wide Web (WWW), commonly known as Web, is the world's dominant software platform. 
+- WWW is an _information space where documents and other web resources are identified by URL and can be accessed_ through the internet using a web browser. 
+- The web resources may be any type downloadable media like images, videos, audio files, pdfs, e-books etc. 
+- With the Web, on demand is available unlike TV and Radio
+- __Web pages__ are documents interconnected by hypertext links formatted in Hypertext Markup Language (HTML), hypertext links permit users to navigate to other web resources. 
+- The __URL__ (Uniform Resource Locator) consists of subdomain, second-level domain, top-level domain and a path to the resource that we want to access.
+#### Overview of HTTP
+- __HTTP__ stands for HyperText Transfer Protocol, an application layer protocol
+- It is implemented in two programs: server program and client program
+- The client and server communicate with each other by exchanging HTTP messages
+-  HTTP _defines the structure of these messages and how the  
+client and server exchange the messages_.
+- When a user requests a Web page, the browser sends HTTP request message for the objects in the page to the server. The server receives the requests and responds with HTTP response messages that contain the objects.
+- HTTP uses _TCP as it's underlying transport protocol_. The HTTP client first initiates a TCP connection with server. Once the connection is established, the _browser and the server processes access TCP through their socket interfaces_.
+- HTTP is a _stateless protocol_ because it doesn't store any state information about the client.
+- ![[httprequestflow.png | 500]]
+- __HTTP connection types:__
+	- Non-persistent HTTP (Separate TCP connection)
+	- Persistent HTTP (Same TCP connection)
+- __Non-persistent HTTP__
+	- 
+
+
+
 
 ---
 ### Electronic Mail in the Internet
