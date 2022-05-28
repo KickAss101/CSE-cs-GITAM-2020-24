@@ -129,11 +129,50 @@ __Application layer protocol__
 	- _Subsequent requests and responses between the same client and server can be sent over the same connection_ which reduces latency in subsequent requests(no handshaking and no slow start). Reduced CPU usage and round-trips because of fewer new connections. In particular, an _entire Web page can be sent over a single persistent TCP connection_. 
 	- Moreover, multiple Web pages residing on the same server can be sent from the server to the same client over a single persistent TCP connection.
 
+#### HTTP Request Message Format
+```http
+GET / HTTP/1.1
+Host: www.yahoo.com
+Connection: close  
+User-agent: Mozilla/5.0  
+Accept-language: en-us
+```
 
-
+#### HTTP Response Message Format
+```http
+HTTP/1.1 200 ok
+Connection: close  
+date: Sat, 28 May 2022 15:44:04 GMT  
+Server: Apache/2.2.3 (CentOS)  
+Last-Modified: Sat, 28 May 2022 15:11:03 GMT  
+Content-Length: 6821  
+Content-Type: text/html
+```
+#### HTTP Status Codes
+![[HTTP-Status-Codes-1.png | 500]]
+#### User-Server Interaction: Cookies
+- _HTTP server is stateless._ This simplifies server design and has permitted engineers to develop high-performance Web servers that can handle thousands of simultaneous TCP connections. 
+- However, it is often desirable for a Web site to identify users, either because the server wishes to restrict user access or because it wants to serve content as a function of the user identity. For these purposes, HTTP uses cookies.
+- __Cookies__ allow sites to keep track of users. 
+- An **HTTP cookie** is a _small piece of data that a server sends to a user's web browser_. The _browser may store the cookie and send it back to the same server with later requests_. Typically, an HTTP cookie is used _to tell if two requests come from the same browser_—keeping a user logged in, for example. 
+![[cookie.png | 450]]
 
 ---
 ### Electronic Mail in the Internet
+E-mail has three major components: user agents, mail servers, and the Simple Mail Transfer  Protocol (SMTP)
+__User agent:__ It allows users to read, reply to, forward, save, and compose messages.
+__Mail Server:__ It is an application that receives incoming email from local users and remote senders and forwards outgoing messages for delivery. A computer dedicated to running these applications is also called a _mail server_.
+__SMTP:__ It is an application layer protocol for electronic mail. It uses the reliable data transfer service of TCP to _transfer mail from sender's mail server to the recipient's mail server_.
+
+__Types of Mail servers__
+- incoming mail servers (POP3, IMAP)
+- outgoing mail servers (SMTP)
+
+
+
+
+
+
 
 ---
 ### DNS - The Internet’s Directory Service
