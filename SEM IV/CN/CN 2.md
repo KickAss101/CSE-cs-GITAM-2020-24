@@ -165,10 +165,37 @@ __Mail Server:__ It is an application that receives incoming email from local us
 __SMTP:__ It is an application layer protocol for electronic mail. It uses the reliable data transfer service of TCP to transfer mail from _sender's mail server to the recipient's mail server_.
 
 __Types of Mail servers__
+[blog - mail service protocols](https://www.navigator.ca/support/imap-pop3-smtp/)
 - incoming mail servers (POP3, IMAP)
 - outgoing mail servers (SMTP)
 
+__Incoming Mail Servers__
+- __POP3__
+	- POP3 stands for __Post Office Protocol 3__. It is a mail protocol used to _retrieve mail from a remote server to a local email client_.  
+	- POP3 _copies only the inbox folder_ from the remote server into the local mail client which means it doesn't download remaining folders like sent box, drafts etc.
+	- _Mail is deleted after it is downloaded from the server_. This saves space on the server. Optionally, you may have a option to leave a copy on the server depending upon the email service you're using.
+	- POP3 _lacks synchronization_ across multiple devices. 
+	- However, POP3 is a very simple mail protocol making it less prone to errors and allows for a much _easier implementation_.
+- __Ports used for POP3__
+	-   Port 110 – Default POP3 port.
+	-   Port 995 – POP3 port used for SSL/TLS.
+- __IMAP__
+	- IMAP stands for __Internet Message Access Protocol__. It is an application layer protocol which is used to _receive the emails from the mail server_. 
+	- It allows viewing the emails from multiple devices, _email is kept on email server_ and caches local copies of the email onto all of the devices.
+	- And, also it _synchronizes all the folders and it's contents_ across all of the devices like inbox, trash, sent box, drafts
+- __Ports used by IMAP__
+	-   Port 143: It is a non-encrypted IMAP port.
+	-   Port 993:  IMAP encrypted.
+- ![[3537.png | 450]]
+- __SMTP__
+	- SMTP stands for __Simple Mail Transfer Protocol__. It is an application layer protocol for electronic mail. It uses the reliable data transfer service of TCP to transfer mail from _sender's mail server to the recipient's mail server_.
+	- The main purpose of SMTP is used to set up communication rules between servers.
+	- It is usually _used with one of two other protocols, POP3 or IMAP_, that let the user save messages in a server mailbox and download them from the server.
+- __Ports used by SMTP__
+	- 25 - default SMTP port
+	- 2525, 587 - alternative ports
 
+![[smtp-message-flow.png | 500]]
 
 
 
@@ -177,6 +204,13 @@ __Types of Mail servers__
 ---
 ### DNS - The Internet’s Directory Service
 - __DNS__ stands for "Domain Name System".  It is the hierarchical and decentralized naming system used to identify computers reachable through the Internet or other IP networks
+- DNS is a directory service that provides a _mapping between the name of a host on the network and its numerical address_.
+- DNS is required for the functioning of the internet.
+- DNS is a _service that translates the domain name into IP addresses_. This allows the users of networks to utilize user-friendly names when looking for other hosts instead of remembering the IP addresses.
+- 
+- For example, suppose user wants to reach google.com that has an IP address of  142.250.195.206, most people would reach this site by specifying www.google.com. Therefore, the domain name is more reliable than IP address.
+
+
  
 
 ---
