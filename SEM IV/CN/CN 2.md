@@ -162,7 +162,7 @@ Content-Type: text/html
 E-mail has three major components: user agents, mail servers, and the Simple Mail Transfer  Protocol (SMTP)
 __User agent:__ It allows users to read, reply to, forward, save, and compose messages.
 __Mail Server:__ It is an application that receives incoming email from local users and remote senders and forwards outgoing messages for delivery. A computer dedicated to running these applications is also called a _mail server_.
-__SMTP:__ It is an application layer protocol for electronic mail. It uses the reliable data transfer service of TCP to _transfer mail from sender's mail server to the recipient's mail server_.
+__SMTP:__ It is an application layer protocol for electronic mail. It uses the reliable data transfer service of TCP to transfer mail from _sender's mail server to the recipient's mail server_.
 
 __Types of Mail servers__
 - incoming mail servers (POP3, IMAP)
