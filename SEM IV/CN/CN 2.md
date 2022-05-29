@@ -35,12 +35,12 @@ __Process Communicating__
 - The process that initiates the communication is labeled as _client_ and the process that waits to be contacted to begin the session is the _server_
 - __The Interface Between the Process and Network__
 	- Processes on different end systems communicate with each other through a software interface known as _sockets_
-	- Socket is an interface between the Application layer and Transport layer
+	- Socket is an _interface between the Application layer and Transport layer_
+	-  _TCP keeps the data in its buffer while sending and receiving the data._
 - __Addressing Processes__
 	- In a network, a host is identified by it's _IP address & a port_ number to identify the process that is in communication.
-- __TCP Buffer__
-	- 
 	![[bigPic.jpg | 500]]
+
 
 __Transport Service Available to application__
 [blog - eletronicspost](https://electronicspost.com/transport-services-available-to-applications/)
@@ -156,7 +156,28 @@ Content-Type: text/html
 - __Cookies__ allow sites to keep track of users. 
 - An **HTTP cookie** is a _small piece of data that a server sends to a user's web browser_. The _browser may store the cookie and send it back to the same server with later requests_. Typically, an HTTP cookie is used _to tell if two requests come from the same browser_—keeping a user logged in, for example. 
 ![[cookie.png | 450]]
+#### Web Caching
+- A Web cache, also called a proxy server, is a _network entity that satisfies HTTP requests on the behalf of an origin Web server_. The Web cache _has its own disk storage and keeps copies of recently requested objects in this storage_.
+- A user’s _browser can be configured_ so that all of the user’s HTTP requests are first directed to the Web cache.
+1. The browser establishes a TCP connection to the Web cache and sends an HTTP request for the object to the Web cache.
+2. The Web cache _checks to see if it has a copy of the object stored locally. If it does, the Web cache returns the object within an HTTP response message to the client browser_.
+3. If the Web cache does not have the object, the Web cache opens a TCP connection to the origin server. The _Web cache then sends an HTTP request for the object into the cache-to-server TCP connection_.
+4. After receiving this request, the origin server sends the object within an HTTP response to the Web cache. When the Web cache receives the object, it stores a copy in its local storage and sends a copy, within an HTTP response message, to the client browser (over the existing TCP connection between the client browser and the Web cache)
+![[kurose_320719_c02f10.gif | 400]]
 
+#### The Conditional GET
+- Although caching can reduce user-perceived response times, it introduces a new problem - the copy of an object residing in the cache may be stale. In other words, the object housed in the Web server may have been modified since the copy was cached at the client. 
+- Fortunately, HTTP has a mechanism that allows a cache to verify that its objects are up to date. This mechanism is called the _conditional GET_.
+- An HTTP request message is a so-called conditional GET message if:
+1. the request message uses the GET method and
+2. the request message includes an `If-Modified-Since:` header line
+
+#### File Transfer Protocol(FTP)
+![[ftp-diagram.gif | 350]]
+- FTP is an application layer protocol that is used to transfer files across the internet
+- FTP uses _port 21 as control connection_ and _port 20 for data transfer_
+- 
+![[kurose_320719_c02f14.gif | 300]]
 ---
 ### Electronic Mail in the Internet
 E-mail has three major components: user agents, mail servers, and the Simple Mail Transfer  Protocol (SMTP)
@@ -189,17 +210,13 @@ __Incoming Mail Servers__
 - ![[3537.png | 450]]
 - __SMTP__
 	- SMTP stands for __Simple Mail Transfer Protocol__. It is an application layer protocol for electronic mail. It uses the reliable data transfer service of TCP to transfer mail from _sender's mail server to the recipient's mail server_.
-	- The main purpose of SMTP is used to set up communication rules between servers.
+	- The main purpose of SMTP is used to _set up communication rules between servers_.
 	- It is usually _used with one of two other protocols, POP3 or IMAP_, that let the user save messages in a server mailbox and download them from the server.
 - __Ports used by SMTP__
 	- 25 - default SMTP port
 	- 2525, 587 - alternative ports
 
 ![[smtp-message-flow.png | 500]]
-
-
-
-
 
 ---
 ### DNS - The Internet’s Directory Service
@@ -212,20 +229,37 @@ __Incoming Mail Servers__
 
 ##### DNS Hierarchy
 ![[xOdVIPZ.png | 500]]
+
 __Root Zone Server__
 - The root is the base of the DNS hierarchy tree. 
 - It's called the Root Zone because there are actually 13 Root servers. These servers are spread out geographically and are the _starting place for traversing DNS via resolution_.
-- It directly answers requests for records in the root zone and answers other requests by _returning a list of the authoritative name servers for the appropriate top-level domain_
+- These servers can directly _answer queries for records stored or cached within the root zone_, and they can also _refer other requests to the appropriate Top Level Domain server_
+
 __Top Level Domain__
-- The TLD 
-__Second Level Domain__
+- A TLD nameserver _maintains information for all the domain names that share a common domain extension_, such as .com, .net etc. For example, a .com TLD nameserver contains information for every website that ends in ‘.com’.
+- Management of TLD nameservers is handled by the _Internet Assigned Numbers Authority_ (IANA). The IANA breaks up the _TLD servers into two main groups_:
+- __Generic top-level domains:__ These are domains that are not country specific, some of the best-known generic TLDs include .com, .org, .net, .edu, and .gov.
+- __Country code top-level domains:__ These include any domains that are specific to a country or state. Examples include .uk, .us, .ru, .in and .jp.
+- When a _TLD gets a dns query request, it would respond by pointing to the authoritative nameserver_  for that domain.
+
+__Authoritative Name Server__
+- When a recursive resolver receives a response from a TLD nameserver, that response will direct the resolver to an authoritative nameserver. The authoritative nameserver is usually the resolver’s last step in the journey for an IP address.
+- The _authoritative nameserver contains information specific to the domain name it serves_ (e.g. google.com) and it can provide a recursive resolver with the IP address of that server found in the DNS "A" record.
 
 __Third Level Domain__
+- A third-level domain is the next highest level following the second-level domain in domain name hierarchy.
+- It is the segment that is _found directly to the left of the second-level domain_. The third-level domain is often called a "subdomain"
 
-##### DNS Query
+__DNS Query__
+- A __recursive resolver__ (also known as a DNS recursor) is the first stop in a DNS query. The recursive resolver _acts as a middleman between a client and a DNS nameserver_.
+- After receiving a DNS query from a web client, a _recursive resolver will either respond with cached data, or send a request to a root nameserver_, followed by another request to a TLD nameserver, and then one last request to an authoritative nameserver.
+- After receiving a response from the authoritative nameserver containing the requested IP address, the _recursive resolver then sends a response to the client_.
+- During this process, the _recursive resolver will cache information received from authoritative name servers_.
+![[60ec9048a730906ff0bfc36d_DNS_SERVER_UPDATE-01.png | 500]]
 
  
 
 ---
 ### Socket Programming: Creating Network Applications 
+
 
