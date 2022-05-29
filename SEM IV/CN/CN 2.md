@@ -203,13 +203,26 @@ __Incoming Mail Servers__
 
 ---
 ### DNS - The Internet’s Directory Service
-- __DNS__ stands for "Domain Name System".  It is the hierarchical and decentralized naming system used to identify computers reachable through the Internet or other IP networks
-- DNS is a directory service that provides a _mapping between the name of a host on the network and its numerical address_.
+[YouTube - DNS Records](https://www.youtube.com/watch?v=6uEwzkfViSM&ab_channel=itfreetraining) [YouTube - DNS Explained](https://www.youtube.com/watch?v=72snZctFFtA&ab_channel=DNSMadeEasyVideos)
+- __DNS__ stands for "Domain Name System". It is the _hierarchical and decentralized naming system used to identify computers reachable through the Internet or other IP networks_
+- DNS is a _directory service_ that provides a _mapping between the name of a host on the network and its numerical address_.
 - DNS is required for the functioning of the internet.
 - DNS is a _service that translates the domain name into IP addresses_. This allows the users of networks to utilize user-friendly names when looking for other hosts instead of remembering the IP addresses.
-- 
 - For example, suppose user wants to reach google.com that has an IP address of  142.250.195.206, most people would reach this site by specifying www.google.com. Therefore, the domain name is more reliable than IP address.
 
+##### DNS Hierarchy
+![[xOdVIPZ.png | 500]]
+__Root Zone Server__
+- The root is the base of the DNS hierarchy tree. 
+- It's called the Root Zone because there are actually 13 Root servers. These servers are spread out geographically and are the _starting place for traversing DNS via resolution_.
+- It directly answers requests for records in the root zone and answers other requests by _returning a list of the authoritative name servers for the appropriate top-level domain_
+__Top Level Domain__
+- The TLD 
+__Second Level Domain__
+
+__Third Level Domain__
+
+##### DNS Query
 
  
 
