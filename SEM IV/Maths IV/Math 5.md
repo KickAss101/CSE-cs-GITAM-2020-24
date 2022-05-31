@@ -36,10 +36,25 @@ __Properties of Hash Functions__
 	-   Also, if a hash function is collision-resistant **then it is second pre-image resistant.**
 ---
 ### Applications of Cryptographic hash Functions
+__Password Storage__
+- Hash functions provide protection to password storage.
+-  Instead of storing password in clear, mostly passwords are stored in hashes
+__Data Integrity Check__
+- Data integrity check is a most common application of the hash functions. It is used to generate the checksums on data files.
+- This application provides assurance to the user about integrity of the data.
+**Game Boards**
+- In a game like Tic-Tac-Toe or chess the position of the game may be stored using hash tables
+__Digital Signature__
+- A signature is usually used to bind signatory to a message. The digital signature is thus a _technique that binds an entity to a hash/digest_.
+- This binding ensures that the person sending the data is solely responsible for being for it and this binding can be verified by the receiver and the third party.
+__Proof-of-Work in Blockchain__
+- Bitcoin and various other blockchains use a concept called “proof of work”. It is important for those technologies to be able to prove that you’ve put a certain amount of computational resources into a problem.
+
 
 
 ---
 ### Hash Functions
+
 
 ---
 ### Message Authentication Codes
