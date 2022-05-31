@@ -59,22 +59,22 @@ __Input/Output Devices:__ An input/output device is a hardware device that has t
 ### I/O Interface
 [Geeksforgeeks - blog](https://www.geeksforgeeks.org/introduction-to-input-output-interface/)
 
-__Input-Output Interface__ is used as an method which helps in transferring of information between the internal storage devices i.e. memory and the external peripheral device .
+__Input-Output Interface__ is used as an method which helps in _transferring of information between the internal storage devices i.e. memory and the external peripheral device_.
 
 __The need for I/O interface (or) Major differences between CPU and peripherals__
 - The nature of peripheral devices is electromagnetic and electro-mechanical. The nature of the CPU is electronic. There is a lot of _difference in the mode of operation of both peripheral devices and CPU_.
 - There is also synchronization mechanism because the _data transfer rate of peripheral devices are slow than CPU_.
-- There is a _difference in the data code and formats_ are between CPU and memory.
+- Peripheral device's _data code and format is different_  from CPU and memory.
 - The _operating mode of each peripheral device can be different from each other_. So as not to disturb the operation of other peripheral devices connected to CPU, we use I/O interface.
 
 ##### Functions of Input-Output Interface:
-1.  It is used to synchronize the operating speed of CPU with respect to input-output devices.
+1.  It is used to _synchronize the operating speed_ of CPU with respect to input-output devices.
 2.  It selects the input-output device which is appropriate for the interpretation of the input-output device.
-3.  It is capable of providing signals like control and timing signals.
-4.  In this data buffering can be possible through data bus.
-5.  There are various error detectors.
-6.  It converts serial data into parallel data and vice-versa.
-7.  It also convert digital data into analog signal and vice-versa.
+3.  It is capable of _providing signals like control and timing signals_.
+4.  In this _data buffering?_ can be possible through data bus.
+5.  There are various _error detectors_.
+6.  It _converts serial data into parallel data and vice-versa_.
+7.  It also _convert digital data into analog signal and vice-versa_.
 
 __Block diagram of I/O Interface__
 ![[interface1.png | 600]]
