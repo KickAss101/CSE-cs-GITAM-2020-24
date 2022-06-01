@@ -91,6 +91,6 @@ __Block diagram of I/O Interface__
 
 ---
 ### Serial Communication
-- __Serial communication__ is the process of sequentially transferring the information/bits on the same channel. Due to this, the cost of wire will be reduced, but it slows the transmission speed.
+- __Serial communication__ is the process of _sequentially transferring the information/bits on the same channel_. Due to this, the cost of wire will be reduced, but it _slows the transmission speed_.
 - Generally, communication can be described as the process of interchanging information between individuals in the form of audio, video, verbal words, and written documents. The serial protocol is run on every device that can be our mobile, personal computers, and many more with the help of following some protocols.
 
