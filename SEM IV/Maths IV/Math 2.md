@@ -54,4 +54,5 @@ __Learning Outcomes__
 
 ---
 ### Transposition Techniques
+#### Rail Fence Cipher
 
