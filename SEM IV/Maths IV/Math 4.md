@@ -35,6 +35,11 @@ __Key Generation__
 
 ---
 ### Elliptic Curve Cryptosystem
+__Curve formula__ => y^2 = x^3 +ax + b
+
+__Trapdoor Function__
+- It is a function that is easy to compute in one direction, yet difficult to computer in the opposite direction (finding it's inverse) without special information called trapdoor.
+
 
 ---
 ### Probabilistic encryption
