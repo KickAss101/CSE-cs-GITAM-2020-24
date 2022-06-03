@@ -55,6 +55,9 @@ __Learning Outcomes__
 
 #### Vernam Cipher
 
+#### One-Time pad Cipher
+
+
 
 
 
