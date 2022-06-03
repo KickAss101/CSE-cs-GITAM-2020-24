@@ -40,11 +40,16 @@ __Learning Outcomes__
  
 
 #### Playfair Cipher
-![[Pasted image 20220526204801.png]]
+![[Pasted image 20220526204801.png | 500]]
 
 #### Hill Cipher
 
 #### polyalphabetic Cipher
+- In a polyalphabetic cipher, multiple “alphabets” are used to encipher.  
+- If two letters are the same in the ciphertext it does not mean they must decipher to the same plaintext letter.  
+- __Polyalphabetic ciphers are__
+	- Vigenere Cipher
+	- Vernam Ciphe
 
 #### Vigenere Cipher
 
@@ -60,3 +65,4 @@ __Learning Outcomes__
 ![[Pasted image 20220603104959.png | 500]]
 
 #### Row Column Cipher
+![[Pasted image 20220603113406.png | 500]]
