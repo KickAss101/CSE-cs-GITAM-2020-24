@@ -48,6 +48,8 @@ __Learning Outcomes__
 
 #### Vigenere Cipher
 
+#### Vernam Cipher
+
 
 
 
@@ -55,4 +57,6 @@ __Learning Outcomes__
 ---
 ### Transposition Techniques
 #### Rail Fence Cipher
+![[Pasted image 20220603104959.png | 500]]
 
+#### Row Column Cipher
