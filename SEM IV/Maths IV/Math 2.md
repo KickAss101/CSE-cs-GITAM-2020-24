@@ -19,8 +19,11 @@ __Learning Outcomes__
 ### Substitution Techniques
 
 #### Caesar Cipher
+- It is a type of substitution cipher in which each letter in the plaintext  is replaced with the letter standing 3 places further down the alphabets. 
+- The alphabet is wrapped around if it exceeds Z, so that Z follows A
 
 #### Monoalphabetic Cipher
+- Monoalphabetic cipher is a substitution cipher in which for a given key, the _cipher alphabet for each plain alphabet is fixed throughout the encryption process_. For example, if ‘A’ is encrypted as ‘D’, for any number of occurrence in that plaintext, ‘A’ will always get encrypted to ‘D’
 >__Permutations__
 >- A permutation of a finite set of elements 'S' is an ordered sequence of all the elements of 'S', with each element appearing exactly once.
 >- Ex: S = {a, b}
@@ -40,12 +43,15 @@ __Learning Outcomes__
  
 
 #### Playfair Cipher
+- In this scheme, _pairs of letters are encrypted_, instead of single letters as in the case of simple substitution cipher.
+- In playfair cipher, initially a key table is created. The key table is a 5×5 grid of alphabets that acts as the key for encrypting the plaintext.
+- Each of the 25 alphabets must be unique and i and j are combined in the table as we need only 25 alphabets instead of 26. If the plaintext contains i, it can be replaced with j.
 ![[Pasted image 20220526204801.png | 500]]
 
 #### Hill Cipher
 
 #### polyalphabetic Cipher
-- In a polyalphabetic cipher, multiple “alphabets” are used to encipher.  
+- In a polyalphabetic cipher, _multiple alphabets are used to encipher_.  
 - If two letters are the same in the ciphertext it does not mean they must decipher to the same plaintext letter.  
 - __Polyalphabetic ciphers are__
 	- Vigenere Cipher
@@ -56,12 +62,19 @@ __Learning Outcomes__
 #### Vernam Cipher
 
 #### One-Time pad Cipher
-
-
-
-
-
-
+- In this scheme, a _random key that is as long as the message_ is used.  
+- The key is _used to encrypt and decrypt a single message, and then is __discarded__.
+- Each new message requires a _new key of the same length as the new message_.  
+- It produces _random output that bears no statistical relationship to the plaintext_.  
+- Because the ciphertext contains no information whatsoever about the plaintext, there is simply no way to break the code.
+- For any plaintext of equal length to the ciphertext, there is a key that produces that plaintext. 
+- Therefore, if you did an exhaustive search of all possible keys, you would end up with many legible plaintexts, with no way of knowing which the intended plaintext was.  
+- Therefore, the code is unbreakable  
+- The security of the one-time pad is entirely due to the randomness of the key.  
+- __Two fundamental difficulties__:  
+	- There is the _practical problem of making large quantities of random keys_. Any heavily used system might require millions of random characters on a regular basis. Supplying truly random characters in this volume is a significant task.  
+	- Another problem is that of _key distribution and protection_. For every message  to be sent, a key of equal length is needed by both sender and receiver.  
+- Because of these difficulties, the one-time pad is used where very high security is required.  
 ---
 ### Transposition Techniques
 #### Rail Fence Cipher
