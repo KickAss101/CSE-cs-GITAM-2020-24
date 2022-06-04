@@ -57,6 +57,34 @@ __Disadvantages__
 
 ---
 ### Cache Memory
+- The _data or contents of the main memory that are used frequently by CPU are stored in the cache memory_ so that the processor can easily access that data in a shorter time.
+- Whenever the CPU needs to access memory, it first checks the cache memory. If the data is not found in cache memory, then the CPU moves into the main memory.
+
+![[coa-cache-memory.png | 500]]
+
+__The basic operation of a cache memory__
+-   When the CPU needs to access memory, the cache is examined. If the word is found in the cache, it is read from the fast memory.
+-   If the word addressed by the CPU is _not found in the cache_, the _main memory is accessed_ to read the word.
+-   The performance of the cache memory is frequently measured in terms of a quantity called **hit ratio**.
+-   When the _CPU refers to memory and finds the word in cache_, it is said to produce a **hit**.
+-   If the _word is not found in the cache_, it is in main memory and it counts as a **miss**.
+-   The _ratio of the number of hits divided by the total CPU references to memory_ (hits plus misses) is the __hit ratio__.
+
+#### Cache Mapping
+- Cache mapping is a _technique that defines how contents of main memory are brought into cache_.
+
+>32k \* 12  (each word is 12 bits)
+>32K = 2^5\*2^10 = 2^15 | so 15 bits are for CPU address bits.
+
+![[Cache-Mapping-Diagram-2.png | 500]]
+
+**Fully Associative Mapping**
+- A block of main memory can map to any line of the cache that is freely available at that moment. 
+- This makes associative mapping more flexible than direct mapping.
+**Direct Mapping**
+- 
+**Set-associative Mapping**
+- 
 
 ---
 ###    Virtual Memories
