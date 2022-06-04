@@ -81,8 +81,17 @@ __The basic operation of a cache memory__
 **Fully Associative Mapping**
 - A block of main memory can map to any line of the cache that is freely available at that moment. 
 - This makes associative mapping more flexible than direct mapping.
+- The associative memory _stores both the address and content (data) of the memory word_.
+- The address value of 15 bits is shown as a five-digit octal number and its  corresponding 12-bit word is shown as a four-digit octal number.
+- A _CPU address of 15 bits is placed in the argument register_ and the associative memory is searched for a matching address.
+- If the address is found, the _corresponding 12-bit data is read and sent to the CPU_. If no match occurs, the main memory is accessed for the word. The address data pair is then transferred to the _associative cache memory_.
+![[associative-mapping-cache.png | 400]]
 **Direct Mapping**
-- 
+- The CPU address of _15 bits is divided into two fields_. The _nine least significant bits constitute the index field_ and the remaining _six bits form the tag field_.
+- In the general case, there are _2^k words in cache memory_ and _2^n words in main memory_. (512 words - 2^9, k=9(index) | 32k - 2^15 | n=15(tag))
+- The n-bit memory address is divided into two fields: _k bits for the index field_ and _n-k bits for the tag field_.
+- A particular block of main memory can map only to a particular line of the cache.  
+- The line number of cache to which a particular block can map is given by-
 **Set-associative Mapping**
 - 
 
