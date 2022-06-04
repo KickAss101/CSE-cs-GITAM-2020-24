@@ -85,13 +85,17 @@ __The basic operation of a cache memory__
 - The address value of 15 bits is shown as a five-digit octal number and its  corresponding 12-bit word is shown as a four-digit octal number.
 - A _CPU address of 15 bits is placed in the argument register_ and the associative memory is searched for a matching address.
 - If the address is found, the _corresponding 12-bit data is read and sent to the CPU_. If no match occurs, the main memory is accessed for the word. The address data pair is then transferred to the _associative cache memory_.
-![[associative-mapping-cache.png | 400]]
+![[associative-mapping-cache.png | 350]]
 **Direct Mapping**
 - The CPU address of _15 bits is divided into two fields_. The _nine least significant bits constitute the index field_ and the remaining _six bits form the tag field_.
 - In the general case, there are _2^k words in cache memory_ and _2^n words in main memory_. (512 words - 2^9, k=9(index) | 32k - 2^15 | n=15(tag))
 - The n-bit memory address is divided into two fields: _k bits for the index field_ and _n-k bits for the tag field_.
-- A particular block of main memory can map only to a particular line of the cache.  
-- The line number of cache to which a particular block can map is given by-
+- _n-bit address is used to access the main memory_ and the _k-bit index to access the cache_.
+- When the CPU generates a memory request, the _index field is used for the address to access the cache_. The _tag field of the CPU address is compared with the tag in the word_ read from the cache.
+- If the two tags match, there is a hit and the desired data word is in cache.
+- If there is no match, there is a miss and the required word is read from main memory. It is then stored in the cache together with the new tag, replacing the previous value.
+- The word at address zero is presently stored in the cache (index = 000, tag = 00, data = 1220). Suppose that the CPU now wants to access the word at address 02000. The index address is 000, so it is used to access the cache. The two tags are then compared. The cache tag is 00 but the address tag is 02, which does not produce a match. Therefore, the main memory is accessed and the data word 5670 is transferred to the CPU. The cache word at index address 000 is then replaced with a tag of 02 and data of 5670.
+![[Pasted image 20220604212522.png | 300]]
 **Set-associative Mapping**
 - 
 
