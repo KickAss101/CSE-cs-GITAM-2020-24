@@ -57,6 +57,7 @@ __Disadvantages__
 
 ---
 ### Cache Memory
+
 ---
 ###    Virtual Memories
 
