@@ -98,9 +98,12 @@ __The basic operation of a cache memory__
 ![[Pasted image 20220604212522.png | 300]]
 **Set-associative Mapping**
 - 
-
+![[Pasted image 20220605103046.png | 350]]
 ---
 ###    Virtual Memories
+
+![[virtual-memory1.png | 400]]
+![[Pasted image 20220605104428.png | 400]]
 
 ---
 ### Memory Management Hardware
