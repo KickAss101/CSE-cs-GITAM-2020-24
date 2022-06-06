@@ -113,10 +113,49 @@ __CoAP layers__
 
 ---
 ### Transport Protocols
-
 #### Bluetooth Low Energy (BLE)
+- BLE stands for Bluetooth Low Energy, is an open source application layer protocol and a _wireless personal area network_ technology designed and marketed by the Bluetooth SIG (Special Interest Group). Also known as Bluetooth smart.
+- BLE has all the features that classic Bluetooth provides with enhancements and with reduced power consumption
+- Though BLE improved many features but retained same range
+- It is supported by many devices and their Operating Systems
 
+__Features of BLE__
+- License free
+- Support to Multi brand mobile / GPOS
+- Low cost - Very much affordable.
+- Low power consumption - Very much needed in IoT infra.
+- Not huge
+- Good range coverage
+-  Extreme heterogeneity support
+
+__Components of BLE__
+- __Application:__ User application resides here and interacts with the Bluetooth stack
+- __Controller:__ The lower layers the Bluetooth stack 
+	- It has link layer and Physical layer
+	- The link layer _defines packet structure and control_
+	- The physical layer takes care of _transmission and reception_
+	- Physical layer also takes care of _modulation and de-modulation_, converts analog to digital and vice-versa.
+- __Host:__ The upper layers of the Bluetooth stack
+	- Generic Access Profile
+	- Generic Attribute Profile
+	- Attribute Protocol
+	- L2CAP
+	- Security Manager
+- __HCI:__ It provides a interface between Host and Controller
+
+![[Pasted image 20220606133646.png | 300]]
+
+
+__Applications of BLE__
+- Fitness technology like fitness bands/watches
+- Sharing of data from nearby devices
+- To lock/unlock vehicles
+- Tracking devices
+![[Pasted image 20220606141541.png | 400]]
 #### Light Fidelity (LiFi)
+- LiFi stands for Light 
+
+
 ---
 ### Addressing and Identification
 #### Internet Protocol Version 4
