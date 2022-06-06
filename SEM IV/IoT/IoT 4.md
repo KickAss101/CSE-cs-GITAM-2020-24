@@ -9,7 +9,13 @@
 ### IoT with Cloud - Challenges
 
 ---
-### Types of Cloud Computing
+### IoT Cloud Computing
+- Cloud computing is the _delivery of computing services over the internet_, by providing flexible, affordable, effective and efficient resources for development.
+- That includes _servers, storage, databases, networking, software, analytics, and intelligence_.
+- Cloud computing provide _economical freedom along with technical strength to the application_.
+- In other word, it is about _outsourcing of IT services and infrastructure to make them available anywhere via the Internet_.
+
+#### Types of Cloud Computing
 __Public__
 - 
 __Private__
