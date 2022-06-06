@@ -40,7 +40,11 @@
 	- When it comes to IoT, the data is generated at multiple points and ownership could lie with multiple participating parties.
 	- Hence, in IoT the ownership-related challenges are multiplied.
 - __Expertise__
-	- 
+	- To use the cloud with IoT requires a _specific skill set_.
+	- The cloud platform gets updated every now and then and so _experts have to constantly upgrade themselves_.
+	- Expertise is a definite challenge.
+	- When IoT and cloud comes together then it will be more challenging
+	- To _understand the sensors and at the same time, to be updated on cloud development_ is a challenging task.
 
 
 ---
