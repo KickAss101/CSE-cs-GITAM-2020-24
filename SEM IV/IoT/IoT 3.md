@@ -59,9 +59,10 @@ __Server or Broker__
 - A server accepts the network connection and messages from the client, _processes the subscribe and unsubscribe requests_, forwards the application messages to the client, and closes the network connection from the client.
 - Another _responsibility of the broker is the authentication, authorization_ of clients.
 - MQTT also supports QoS levels
-	- 0 - At most once (Best effort, no ACK)
+	-  0 - At most once (Best effort, no ACK)
 	- 1 - At least once (Acked, retransmitted if ack not received)
 	- 2 - Exactly once (Request to publish, clear to send)
+	
 **TOPIC**
 - The label provided to the message is checked against the subscription known by the server is known as TOPIC.
 
