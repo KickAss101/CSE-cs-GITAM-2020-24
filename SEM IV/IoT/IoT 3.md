@@ -81,7 +81,7 @@ __MQTT Message Format__
 ![[mqtt-protocol4.jpg]]
 
 #### Constrained Application Protocol (CoAP)
-
+- 
 ---
 ### Transport Protocols
 
