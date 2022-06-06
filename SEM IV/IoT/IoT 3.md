@@ -64,7 +64,7 @@ __Server or Broker__
 	- 2 - Exactly once (Request to publish, clear to send)
 	
 **TOPIC**
-- The label provided to the message is checked against the subscription known by the server is known as TOPIC.
+- The label provided to the _message is checked against the subscription known by the server_ is known as TOPIC.
 
 ![[mqtt-protocol2.jpg | 350]]
 
@@ -78,10 +78,39 @@ __Server or Broker__
 
 __MQTT Message Format__
 
-![[mqtt-protocol4.jpg]]
+![[mqtt-protocol4.jpg | 400]]
 
 #### Constrained Application Protocol (CoAP)
-- 
+- CoAP stands for Constrained Application Protocol, is a specialized _web transfer protocol (HTTP) for use with constrained nodes and constrained networks_ in the Internet of Things.
+- It uses RESTful (Representational State Transfer) API concept that has following methods:
+	- GET : Read information
+	- PUT: Update information
+	- POST: Create new information
+	- DELETE: Delete information
+- CoAP can transport RESTful call over _thin networks_
+- __Features__
+	- Web protocol used with _machine-to-machine_ (M2M) with constrained requirements
+	- Uses _UDP_ as it's transport layer protocol
+	- _Asynchronous_ message exchange
+	- _Low overhead_ and very simple to parse
+	- _URI and content-type_ support
+	- _Proxy and caching_ capabilities
+	- Security with _DTLS_ (Datagram Transport Layer Security)
+
+__CoAP layers__
+- __Request/Response__
+	- The Request/Response layer _manages request/response interaction based on request/response messages_.
+- __Messages__
+	- The Messages layer deals with _UDP and with asynchronous messages_.
+- __CoAP supports 4 different message types__
+	- Confirmable (CON) (Reliable)
+	- Non-Confirmable (NON) (Non-reliable)
+	- Acknowledgment (ACK)
+	- Rest (RST)
+
+![[coap-messages-ack.webp | 300]]
+![[coap-stack-1.webp | 300]]
+
 ---
 ### Transport Protocols
 
