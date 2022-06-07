@@ -148,7 +148,7 @@ __Parameters to consider when choosing a cloud service provider__
 - In case the _data volume is high_ and it reaches the cloud after _some delay_.
 - Or sometimes we want to _distribute the data to other IoT devices_.
 - In such cases, fog computing serves the solution
-- The most _sensitive data should be analyzed in the area closer_ to the place where it is generated. (Edge Computing)
+- The most _sensitive data should be analyzed in the area closer_ to the place where it is generated.
 - Using fog computing we can _process the data locally_ and to avoid the trouble by not sending the data to the cloud.
 - _Respond much faster because of data is moving locally_ so data travel is reduced considerably.
 - Only the _required data will be sent to the cloud for further processing or storage or distribution to other nodes of the network_.

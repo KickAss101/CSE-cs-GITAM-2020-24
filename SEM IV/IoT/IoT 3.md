@@ -25,7 +25,6 @@
 __Characteristics of MQTT__
 - It is a _machine to machine protocol_, i.e., it provides communication between the devices.
 - It is designed as a _simple and lightweight messaging protocol that uses a publish/subscribe system_ to exchange the information between the client and the server.
-- It does not require that both the client and the server establish a connection at the same time.
 - It provides _faster data transmission_. It's a _real-time messaging protocol_.
 - It _allows the clients to subscribe to the narrow selection of topics_ so that they can receive the information they are looking for.
 
@@ -186,6 +185,24 @@ __Disadvantages__
 ---
 ### Addressing and Identification
 #### Internet Protocol Version 4
+- In Internet Protocol version 4 (IPv4), almost 4.3 billion IP addresses are possible (2^32).
+- An IPv4 address is a 32-bit address that is represented in dotted decimal notation, with a decimal value representing each of the four octets that make up the address (from 0.0.0.0 to 255.255.255.255)
+- About 18 million addresses in three ranges are reserved for use in private networks. 
+- Packets addresses in these ranges are not routable in the public Internet; they are ignored by all public routers. 
+- Therefore, private hosts cannot directly communicate with public networks, but require network address translation(NAT) at a routing gateway for this purpose.
+- An IP consists of a network part and host part that is determined by it's subnet.
+
+__IP Address Classes__
+[geeksforgeeks - blog](https://www.geeksforgeeks.org/introduction-of-classful-ip-addressing/)
+[YouTube](https://www.youtube.com/watch?v=vcArZIAmnYQ&t=464s&ab_channel=SunnyClassroom)
+![](nethostdata.jpg)
+__Reserved private IPv4 network ranges__
+
+|Name|CIDR Block|Address Range|No. of Addresses|Classfull|
+|-|-|-|-|-|
+|24-bit Block|10.0.0.0/8|10.0.0.0 - 10.255.255.255|16777216|Class A|
+|20-bit block|172.16.0.0/12|172.16.0.0 – 172.31.255.255|1048576|Class B|
+|16-bit block|192.168.0.0/16|192.168.0.0 – 192.168.255.255|65536|Class C|
 
 #### Internet Protocol Version 6
 
