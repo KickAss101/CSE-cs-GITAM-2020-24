@@ -118,6 +118,15 @@ __CoAP layers__
 - BLE has all the features that classic Bluetooth provides with enhancements and with reduced power consumption
 - Though BLE improved many features but retained same range
 - It is supported by many devices and their Operating Systems
+- A BLE device shall be able to _communicate to outside world by two means_:
+	- Broadcasting
+		- _Sending out message to more than one recipient_. 
+		- Data is sent out _one-way_
+		- Whichever device is capable of picking the data (receiving), it will. (Radio Broadcast)
+	- Connections
+		- Connection is permanent.
+		- It enables _periodical data transfer between the devices_ (Two devices)
+		- The term _Master Slave Configuration_ will come into picture.
 
 __Features of BLE__
 - License free
@@ -153,8 +162,26 @@ __Applications of BLE__
 - Tracking devices
 ![[Pasted image 20220606141541.png | 400]]
 #### Light Fidelity (LiFi)
-- LiFi stands for Light 
+- LiFi stands for Light Fidelity
+- Now a days, too many devices are connected to internet.
+- Everything and anything, _from watch to water heater_ is connected to internet and _internet is used like oxygen_.
+- Li-Fi is a _wireless communication technology_ which utilizes light to transmit data and position between devices. Speed upto stunning: _224Gbps_
+- In technical terms, Li-Fi is a _light communication system that is capable of transmitting data at high speeds over the visible light, ultraviolet, and infrared spectrums_. 
+- In its present state, only _LED lamps can be used for the transmission of data in visible light_.
+- In terms of its end use, the technology is similar to Wi-Fi — the key technical difference is that _Wi-Fi uses radio frequency to induce a voltage in an antenna_ to transmit data, whereas _Li-Fi uses the modulation of light intensity_ to transmit data.
+- Li-Fi's ability to _safely function in areas otherwise susceptible to electromagnetic interference_ (e.g. aircraft cabins, hospitals, military) is an advantage.
+- About _100 times faster than speeds achievable by WiFi_.
 
+__Advantages__
+- Secured
+- Efficient
+- Fast
+- Is an effective alternate to Radio Frequency
+
+__Disadvantages__
+- Since, walls are there, it could be short range.
+- Infra set up could take a bit more time to make it practically viable.
+- Still, A major challenge for us to face : how the receiving device will transmit back to transmitter.
 
 ---
 ### Addressing and Identification
@@ -162,7 +189,21 @@ __Applications of BLE__
 
 #### Internet Protocol Version 6
 
-#### Uniform Resource Identifier
+#### Universal Resource Identifier
+![[Pasted image 20220607121018.png | 400]]
+- It is sequence of characters, used to identify resources.
+- Resources can be Logical or Physical.
+- Guidelines are issued by IETF (Internet Engineering Task Force)
+- URL and URN are children of the parent URI.
+- URIs tries to identify a resource through a name and to provide a means of locating the resource by describing its primary access mechanism.
+- URI is of two types:
+	- Uniform Resource Name (URN)
+		- URN defines an item’s unique identity
+	- Uniform Resource Locator (URL)
+		- URL provides a method to find a resource
+		- ![[Pasted image 20220607121532.png | 400]]
+
+
 
 
 

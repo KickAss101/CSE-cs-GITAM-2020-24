@@ -8,7 +8,8 @@
 ---
 ### IoT with Cloud - Challenges
 - __Privacy and Security__
-	- 
+	- Security is a major concern in the field of IoT.
+	- Valuable data goes into the cloud, outside the firewall this data becomes hackable.
 - __Bandwidth Cost__
 	- Bandwidth is one of the challenges because of _continuous data transferring from the IoT devices_.
 	- IoT is all about data, and in most cases, this would be _big data_. 
@@ -81,27 +82,27 @@ __Disadvantages__
 - This particular deployment model can be _chosen wherever __confidentiality__ matters the most_.
 
 __Advantages__
-- High level of security and privacy
-- More control flexible in terms of deciding and managing the resources
+- _High level of security and privacy_
+- _More control and flexibility_ in terms of deciding and managing the resources
 
 __Disadvantages__
-- Very Expensive
-- Need technical skill for maintaining  and difficult to management
-- Policies and other related things are to be framed carefully to make sure that the data is safe
+- _Very Expensive_
+- _Need technical skill_ for maintaining  and difficult to management
+- _Policies and other related things are to be framed carefully_ to make sure that the data is safe
 
 #### Hybrid
 - This deployment is a _mix of both private and public cloud deployment_.
 - The resources offered and managed are both in-house and third party based
 
 __Advantages__
-- Less investment needed to setup the infrastructure
-- Less technical skill required to manage and maintain the cloud
-- Customer support team can be reached on demand
-- Easily scaled up or scaled down based on requirements
+- _Less investment_ needed to setup the infrastructure
+- _Less technical skill_ required to manage and maintain the cloud
+- _Customer support_ team can be reached on demand
+- _Easily scaled up or scaled down_ based on requirements
 
 __Disadvantages__
-- Security and privacy issues are the major challenges
-- Less flexibility and controls compare to public cloud
+- _Security and privacy_ issues are the major challenges
+- _Less flexibility and controls_ compare to public cloud
 
 ---
 ### Types of Cloud service Providers
@@ -126,4 +127,85 @@ __Software as a Service__
 - Examples of SaaS include Salesforce, Dropbox and Google Workspace, Netflix, Zoom.
 
 ---
+### Selection of Cloud Service Provider for IoT Applications
+__Parameters to consider when choosing a cloud service provider__
+- Certification and Standards Compliance
+	- 
+- Financial Health of the Service Provider
+- Business and Technology Strength
+- Compliance Audit
+- Service Level Agreements
+- Reporting/Tracking
+- Costing and Billing
+- Maintenance Monitoring and Upgrade
+- Support
+- Security
+
+---
 ### Introduction to Fog Computing
+- IoT is all about the data. The factors that affect data are the four Vs - _variety, velocity, veracity and volume_.
+- All IoT applications require _instant analysis and action_.
+- In case the _data volume is high_ and it reaches the cloud after _some delay_.
+- Or sometimes we want to _distribute the data to other IoT devices_.
+- In such cases, fog computing serves the solution
+- The most _sensitive data should be analyzed in the area closer_ to the place where it is generated. (Edge Computing)
+- Using fog computing we can _process the data locally_ and to avoid the trouble by not sending the data to the cloud.
+- _Respond much faster because of data is moving locally_ so data travel is reduced considerably.
+- Only the _required data will be sent to the cloud for further processing or storage or distribution to other nodes of the network_.
+- This will be based on _storage requirements and guidelines_.
+- _Predictive analytics can also be carried out with the data stored in the cloud_.
+- The _fog is below cloud_, which means it is _closer to the elements that generate data_.
+- _After analysis, the data stored is pushed on to the cloud_.
+- Results in _increased efficiency and safety both physical and asset safety_.
+- Some __examples__ where faster response time is extremely important are _factory or manufacturing line, oil and gas tube lines fault analysis, on-flight diagnosis, and healthcare_.
+![[Pasted image 20220607092631.png | 400]]
+![[sensors-17-01695-g001.webp | 400]]
+
+
+__Advantages of Fog Computing__
+- _Minimal amount of data sent to the cloud_.
+- _Reduced bandwidth_ consumption.
+- _Reduced data latency_.
+- _Improved data security_. When limited data goes to cloud, it is easier to protect it.
+- _Immediate processing of data in real time_ (this is very much needed in industrial applications).
+
+![[Pasted image 20220607092144.png | 400]]
+
+#### Working of Fog Computing
+- Sensors/devices generate data  to _transmit it to the middle layer_ (Fog), which is very close the data source.
+- These nodes in the _middle layer are capable of handling the data_.
+- This requires _minimum power and lesser resources_.
+- _All the data need not go to the cloud_ at the instant.
+- Also, _sensitive data gets processed very fast, which results in an instant response_.
+- _Fog is not meant for hefty storage_. It is still the cloud that does the task of storing big data.
+- Fog is just an _intermediary layer for faster data processing_, and the _faster response_. 
+
+#### Fog Computing v/s Edge Computing
+| Fog Computing | Edge Computing |
+| - | - |
+|Data processing is moved to the processors that are connected to the local area network (LAN), making it a little farther from the sensors and actuators. | Edge computing is the computing carried out at the device itself, where all the sensors are-connected.|
+
+_Thus, the main difference between edge and fog computing is the distance._
+
+---
+### Cloud Computing: Security aspects
+- The security of any computing platform including cloud computing depends on:
+	- __Software security__
+		- Software is the core component and plays a vital role in presenting and ensuring a secure environment.
+		- If there are _defects_ created/generated during the development phase, it is a _software security threat_.
+		- Defects such as simple software implementation defects, _memory allocation, design issues, and exception handling_ all contribute to _security issues_.
+		- This can be ensured by complete and _comprehensive testing_ carried out at all-stages.
+	- __Infrastructure security__
+		- Making sure that the infrastructure provided by the CSP is safe.
+		- _Third party could also contribute to the infrastructure._
+		- It is extremely important to _check the security vulnerabilities_ with the infrastructure.
+		- All infrastructure related _guidelines should be mentioned clearly in the agreements and should be made transparent to the customer_.
+		- If data is damaged, everything is damaged and lost.
+		- Hence, care should be taken to protect the infrastructure.
+	- __Storage security__
+		- It is important to be informed of _who owns the data and the location where it is stored_.
+		- _Data leak, snooping, malware attacks, etc. are all threats to the stored data_ and can be listed under storage security.
+		- Appropriate _antivirus software and periodic monitoring_, should help protect the data.
+	- __Network security__
+		- Data is stored in the cloud via the Internet, and hence _all network threats become a possibility_.
+- If any of these is compromised, it would result in security violation and could cause damages.
