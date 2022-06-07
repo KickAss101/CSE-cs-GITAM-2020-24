@@ -8,12 +8,12 @@
 ---
 ### IoT with Cloud - Challenges
 - __Privacy and Security__
-	- Security is a major concern in the field of IoT.
+	- Security is a _major concern in the field of IoT_.
 	- Valuable data goes into the cloud, outside the firewall this data becomes hackable.
 - __Bandwidth Cost__
 	- Bandwidth is one of the challenges because of _continuous data transferring from the IoT devices_.
 	- IoT is all about data, and in most cases, this would be _big data_. 
-	- Cloud computing is preferred for storage and processing in IoT.
+	- _Cloud computing is preferred for storage and processing in IoT_.
 	- Small-scale IoT application demand less resources.
 	- But if the application is data concentrated, then the _investment in bandwidth would be considerable_.
 - __Migration and Portability__

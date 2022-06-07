@@ -58,4 +58,50 @@
 
 ---
 ### Microcontrollers
+#### 8051 Components
+- __Bus Control__
+	- Two types of buses: Data bus and Address bus
+	- Data bus is used to transfer _8-bit data_ - acts as an electronic channel 
+	- Address bus is used transfer _16-bit_ information but not data
+- __Four General Purpose parallel I/O ports__
+	- Port0, Port1, Port2, Port3
+	- Each port is of 8-bit
+	- Port 0
+		- No external memory support
+		- Acts as I/O port
+	- Port 1
+		- 
+- __Timers and Counters__
+	- Internal operation can be synchronized using clock circuit
+	- XTAL1 and XTAL2 acts as oscillator circuit
+	- Four additional pins:
+		- EA
+		- PSEN
+		- ALE -
+		- RST -  Reset
+- __Internal RAM and ROM__
+	- _ROM_ is non-volatile and it is of 4KB
+	- It can address program memory as well as 64KB of data memory
+	- _RAM_ is a volatile memory
+	- It is 128bytes of internal RAM
+	- It is divided into 32 working registers
+	- 32 working registers are constituted as 4 register banks
+	-  Bank 0, Bank 1, Bank 2, Bank 3
+	- Each bank hold 8 registers
+- __Serial port__
+	- SBUF - Serial Port Data buffer hold the data
+	- SCON - Serial Control, manager data communication
+	- PCON - Power Control, manages data transfer rate
+	- Pins: RXD & TXD
+- __Interrupt Control Logic__
+	- It suspends the microcontroller when an interrupt occurs
+	- Two ways of giving interrupt to micorcontrollers
+		- By sending Software signal
+		- By send Hardware signal
+		- Five sources of interrupt
+			- 2 external interrupts service
+			- 3 external interrupts services
+-  __CPU__
+	- 
+
 ![[8051_architecture.png | 400]]
