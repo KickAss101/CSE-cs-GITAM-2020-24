@@ -36,10 +36,10 @@
 - __Data Ownership__
 	- The _data stored by the user on the cloud is owned by the user_.
 	- This means that the data is under the ownership of the person who generates it.
-	- However, when opting for cloud storage, the data is under the custody of the cloud service provider.
+	- However, when opting for cloud storage, the _data is under the custody of the cloud service provider_.
 	- Then, it appears that the service provider owns the data.
-	- When it comes to IoT, the data is generated at multiple points and ownership could lie with multiple participating parties.
-	- Hence, in IoT the ownership-related challenges are multiplied.
+	- When it comes to IoT, the _data is generated at multiple points_ and _ownership could lie with multiple participating parties_.
+	- Hence, in IoT the _ownership-related challenges are multiplied_.
 - __Expertise__
 	- To use the cloud with IoT requires a _specific skill set_.
 	- The cloud platform gets updated every now and then and so _experts have to constantly upgrade themselves_.
