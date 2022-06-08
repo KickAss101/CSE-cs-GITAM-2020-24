@@ -107,7 +107,7 @@ __Disadvantages__
 ---
 ### Types of Cloud service Providers
 __Infrastructure as a Service__
-- Provider supplies the basic compute, storage and networking infrastructure along with the hypervisor - the virtualization layer.
+- Provider supplies the _basic compute, storage and networking infrastructure along with the hypervisor_ - the virtualization layer.
 - Users must then _create virtual instances such as VMs and containers, install OS, support applications and data, and handle all of the configuration and management associated with those tasks_.
 - The _consumer does not manage or control the underlying cloud infrastructure_ but _has control over operating systems, storage, and deployed applications_.
 - This service provides you with the _highest level of flexibility_.
