@@ -8,6 +8,26 @@ __Learning Outcomes__
 
 ---
 ### Symmetric Cipher Model
+A symmetric encryption scheme has five ingredients :  
+- __Plaintext(P)__: This is the original intelligible message or data that is  
+fed into the algorithm as input.  
+- __Encryption algorithm (E)__: The encryption algorithm performs  
+various substitutions and transformations on the plaintext.  
+- __Secret key(K)__ : The secret key is also input to the encryption  
+algorithm. The key is a value independent of the plaintext and of the  
+algorithm. The algorithm will produce a different output depending on  
+the specific key being used at the time. The exact substitutions and  
+transformations performed by the algorithm depend on the key.  
+- __Ciphertext ( C )__ : This is the scrambled message produced as  
+output. It depends on the plaintext and the secret key. For a given  
+message, two different keys will produce two different ciphertexts. The  
+ciphertext is an apparently random stream of data and, as it stands, is  
+unintelligible.  
+- __Decryption algorithm (D)__ : This is essentially the encryption  
+algorithm run in reverse. It takes the ciphertext and the secret key and  
+produces the original plaintext.  
+The security of the cryptosystem often depends on keeping the key secret  
+to some set of parties.
 
 ---
 
@@ -39,9 +59,6 @@ __Learning Outcomes__
 - The most common two letter combinations are called as digrams. e.g. th, in, er, re and an.  
 - The most common three letter combinations are called as _trigrams_. e.g. the, ing, and, and ion.
 
-
- 
-
 #### Playfair Cipher
 - In this scheme, _pairs of letters are encrypted_, instead of single letters as in the case of simple substitution cipher.
 - In playfair cipher, initially a key table is created. The key table is a 5×5 grid of alphabets that acts as the key for encrypting the plaintext.
@@ -49,6 +66,7 @@ __Learning Outcomes__
 ![[Pasted image 20220526204801.png | 500]]
 
 #### Hill Cipher
+Hill cipher is a polygraphic substitution cipher based on linear algebra. Each letter is represented by a number modulo 26. Often the simple scheme A = 0, B = 1, …, Z = 25 is used, but this is not an essential feature of the cipher. To encrypt a message, each block of n letters (considered as an n-component vector) is multiplied by an invertible n × n matrix, against modulus 26. To decrypt the message, each block is multiplied by the inverse of the matrix used for encryption
 
 #### polyalphabetic Cipher
 - In a polyalphabetic cipher, _multiple alphabets are used to encipher_.  

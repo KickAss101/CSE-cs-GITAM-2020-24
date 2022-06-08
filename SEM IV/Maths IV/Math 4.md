@@ -35,10 +35,13 @@ __Key Generation__
 
 ---
 ### Elliptic Curve Cryptosystem
+__Elliptic curves__ can _intersect almost 3 points when a straight line is drawn intersecting the curve_. Elliptic curve is _symmetric about the x-axis_. This property plays a key role in the algorithm.
+- 
+
 __Curve formula__ => y^2 = x^3 +ax + b
 
 __Trapdoor Function__
-- It is a one-way function that is easy to compute in one direction, yet difficult to computer in the opposite direction (finding it's inverse) without special information called trapdoor.
+- It is a _one-way function_ that is easy to compute in one direction, yet difficult to computer in the opposite direction (finding it's inverse) without special information called trapdoor.
 
 __Popular Elliptic Curves in Cryptography__
 - NIST P-256 (Prime-256v1)
@@ -49,5 +52,6 @@ __Popular Elliptic Curves in Cryptography__
 
 ---
 ### Probabilistic encryption
+Probabilistic encryption is the _use of randomness in an encryption algorithm_, so that when encrypting the same message several times it will, in general, yield different ciphertexts. The term ‘probabilistic encryption’ is typically _used in reference to public key encryption algorithms_.
 
 ---
