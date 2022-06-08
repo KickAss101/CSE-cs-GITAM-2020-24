@@ -10,57 +10,96 @@
 ### Cryptographic Hash Function
 __Cryptographic Hash Function:__ 
 - A hash function is a _mathematical algorithm that maps data of an arbitrary size to a fixed length output_ in a deterministic and random manner and it's one-way function.
-- A hash function H _accepts a variable-length block of data M as input_ and produces a fixed-size hash value h = H(M)
+- A hash function H _accepts a variable-length block of data M as input_ and produces a _fixed-size hash value h = H(M)_
 - The values returned by the hash function are called _hash values, hash codes, digests, simply hashes_ 
 
+![[hash_functions-1.jpg | 300]]
+
 __Features of Hash Functions__
-- Hash function coverts data of arbitrary length to a fixed length. This process is often referred to as **hashing the data**.
+- Hash function _coverts data of arbitrary length to a fixed length_. This process is often referred to as **hashing the data**.
 -  In general, the _hash is much smaller than the input data_, hence hash functions are sometimes called **compression functions**.
--  Since a hash is a _smaller representation of a larger data_, it is also referred to as a **digest**.
+-  Since a hash is a _smaller representation of a larger data_, it is also referred to as a **digest**
 -  Hash function with n bit output is referred to as an **n-bit hash function**. Popular hash functions generate values between 160 and 512 bits.
+- Computationally hash functions are much _faster than a symmetric encryption_.
 
 __Properties of Hash Functions__
 - **Pre-Image Resistance**
-	- This property means that it should be computationally hard to reverse a hash function.
+	- This property means that it should be _computationally hard to reverse a hash function_.
 	- In other words, if a hash function h produced a hash value z, then it should be a _difficult process to find any input value X that hashes to z_.
-	-   This property protects against an attacker who only has a hash value and is trying to find the input. Like password cracking (confidentiality).
+	-   This property _protects against an attacker who only has a hash_ value and is _trying to find the input_. Like password cracking (confidentiality).
 - **Second Pre-Image Resistance**
 	- This property means _given an input and its hash, it should be hard to find a different input with the same hash_.
 	-   In other words, if a hash function h for an input x produces hash value h(x), then it should be _difficult to find any other input value y such that h(y) = h(x)_.
-	-   This property of hash function protects against an attacker who has an input value and its hash, and wants to substitute different value as legitimate value in place of original input value (integrity).
+	-   This property of hash function _protects against an attacker who has an input value and its hash, and wants to substitute different value as legitimate value_ in place of original input value (integrity).
 - **Collision Resistance**
 	- This property means it should be _hard to find two different inputs of any length that result in the same hash_. This property is also referred to as collision free hash function.
-	-   In other words, for a hash function h, it is hard to find any two different inputs x and y such that h(x) = h(y).
-	-   Since, hash function is compressing function with fixed hash length, it is impossible for a hash function not to have collisions. This property of collision free only confirms that these collisions should be hard to find.
-	-   This property makes it very difficult for an attacker to find two input values with the same hash.
-	-   Also, if a hash function is collision-resistant **then it is second pre-image resistant.**
+	-   In other words, for a hash function h, it is _hard to find any two different inputs x and y such that h(x) = h(y)_.
+	-   Since, hash function is _compressing function with fixed hash length, it is impossible for a hash function not to have collisions_. This property of collision free _only confirms that these collisions should be hard to find_.
+	-   This property makes it very _difficult for an attacker to find two input values with the same hash_.
+	-   Also, if a hash function is collision-resistant _then it is second pre-image resistant_.
 ---
 ### Applications of Cryptographic hash Functions
+
+__Message Authentication__
+- 
+
+__One way password file__
+
+
+__Intrusion detection and prevention__
+- Hash functions can be used for intrusion detection and intrusion prevention.
+- Store H(F) for each file on a system and secure the hash values.  
+- One can later _determine if a file has been modified by recomputing H(F)_.  
+- An _intruder would need to change F without changing H(F)_ and that is not likely possible.
+
 __Password Storage__
 - Hash functions provide protection to password storage.
 -  Instead of storing password in clear, mostly passwords are stored in hashes
+
 __Data Integrity Check__
 - Data integrity check is a most common application of the hash functions. It is used to generate the checksums on data files.
 - This application provides assurance to the user about integrity of the data.
+
 **Game Boards**
 - In a game like Tic-Tac-Toe or chess the position of the game may be stored using hash tables
+
 __Digital Signature__
 - A signature is usually used to bind signatory to a message. The digital signature is thus a _technique that binds an entity to a hash/digest_.
 - This binding ensures that the person sending the data is solely responsible for being for it and this binding can be verified by the receiver and the third party.
-__Proof-of-Work in Blockchain__
-- Bitcoin and various other blockchains use a concept called “proof of work”. It is important for those technologies to be able to prove that you’ve put a certain amount of computational resources into a problem.
-
-
-
----
-### Hash Functions
-
 
 ---
 ### Message Authentication Codes
+- MAC stands for __Message Authentication Code__, is an _authentication technique which involves the use of a secret key to generate a small fixed-size block of data_ known as cryptographic _checksum or MAC_, that is _appended to the message_.
+- It is a _symmetric key cryptographic technique to provide message authentication_. For _establishing MAC process, the sender and receiver share a symmetric key K_.
+- Essentially, a _MAC is an encrypted checksum generated on the underlying message_ that is _sent along with a message to ensure message authentication_.
+- ![[mac.jpg | 400]]
+
+- __Process of MAC__
+	- The sender uses some publicly known MAC algorithm, _inputs the message and the  secret key K and produces a MAC value_.  
+	- Similar to hash, MAC function also _compresses an arbitrary long input into a fixed length output_. The major _difference between hash and MAC is that MAC uses secret key during the compression_.
+	- The sender _forwards the message along with the MAC_. Here, we assume that the message is sent in the clear, as we are concerned of providing _message origin authentication_, not confidentiality. If confidentiality is required, then the message needs encryption.
+	- _On receipt of the message and the MAC_, the _receiver feeds the received message and the shared secret key K into the MAC algorithm and re-computes the MAC value_.
+	- The _receiver now checks equality of freshly computed MAC with the MAC received from the sender_. If they _match, then the receiver accepts the message_ and assures himself that the message has been sent by the intended sender.
+	- If the computed MAC does _not match_ the MAC sent by the sender, the _receiver cannot determine whether it is the message that has been altered_ or it is the origin that has been falsified. As a bottom-line, a _receiver safely assumes that the message is not the genuine_.
+
+__Limitations of MAC__
+There are two major limitations of MAC due to it's symmetric nature of operation
+- _Establishment of Shared Secret_
+	- It can provide message authentication among pre-decided users who have shared key
+	- This requires _establishment of shared secret prior to use of MAC_
+- _Inability to Provide Non-Repudiation_
+	- Non-repudiation is the assurance that a message originator cannot deny any  previously sent messages and commitments or actions.  
+	- MAC technique does not provide a non-repudiation service. If the sender and  receiver get involved in a dispute over message origination, MACs cannot provide a proof that a message was indeed sent by the sender  
+	- Though no third party can compute the MAC, still sender could deny having sent the message and claim that the receiver forged it, as it is impossible to determine which of the two parties computed the MAC.
+
+#### Difference between digest and MAC
+| Digest | MAC|
+|-|-|
+|A message digest algorithm takes a single input, a message, and produces a "message digest" (aka hash) which allows you to verify the integrity of the message: Any change to the message will (ideally) result in a different hash being generated. An attacker that can replace the message and digest is fully capable of replacing the message and digest with a new valid pair.|A MAC algorithm takes two inputs, a message and a secret key and produces a MAC which allows you to verify the integrity _and_ the authenticity of the message: Any change to the message _or_ the secret key will (ideally) result in a different MAC being generated. Nobody without access to the secret should be able to generate a MAC calculation that verifies; in other words a MAC can be used to check that the MAC was generated by a party that has access to the secret key.
 
 ---
 ### Digital Signatures
+
 ---
 
 ### Introduction to DSA
