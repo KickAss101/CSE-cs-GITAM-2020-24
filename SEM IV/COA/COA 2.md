@@ -103,7 +103,9 @@ __Types of Registers__
 ---
 ### Computer Instructions
 ---
-### Instruction Cycles
+### Instruction Cycle
+![[Pasted image 20220609204958.png | 500]]
+
 
 ---
 ### Complete computer description
