@@ -18,8 +18,7 @@ __Learning Outcomes:__
 
 ---
 ### Instruction code
->A group of bits that instruct the computer  to perform specific operation
-It is divided into 2 parts: Opcode and Operand/address
+__Instruction code:__ A group of bits that instruct the computer  to perform a specific operation. It is divided into 2 parts: Opcode and Operand/address
 
 __Instruction Format__
 4096(address lines) x 16(opcode) -> 2^12 + 2^4 -> 16 bit memory word
@@ -28,7 +27,18 @@ __Instruction Format__
 
 |opcode|operand|
 |-|-|
-|15-12|11-0|
+|15-12 (3 bits)|11-0 (12 bits)|
+
+__Operation Code(opcode)__
+- A group of bits that define the operation
+	- Ex: add, subtract, multiply, shift, complement
+- _No. of bits required for opcode depends on total no. of operations_ available in computer
+- The operation code must consists of at least n-bits for a given 2^n or less distinct operations
+
+__Address(Operand)__
+- _Specifies the location of operands_ (register/memory words)
+- Memory words are specified by their address
+- Registers are specified by their k-bit binary code that specify one of 2^k registers
 
 __Types of instructions__
 - Memory reference instruction
@@ -39,17 +49,6 @@ __Types of opcode/address__
 - Immediate address (actual operand)
 - Direct address (address that points to operand) [15bit -> 0]
 - Indirect address (address of memory word which points to operand address) [15bit -> 1]
-
-__Operation Code(opcode)__
-- A group of bits that define the operation
-	- Ex: add, subtract, multiply, shift, complement
-- No. of bits required for opcode depends on total no. of operation available in computer
-- The operation code must consists of at least n-bits for a given 2^n or less distinct operations
-
-__Address(Operand)__
-- Specifies the location of operands (register/memory words)
-- Memory words are specified by their address
-- Registers are specified by their k-bit binary code that specify one of 2^k registers
 
 #### Problem
 A computer uses a memory unit with 256k words of 32 bit each. A binary instruction code is stored in one word of memory. The instruction has four parts: an indirect bit. an operation code, a register code part to specify one of 64 registers, and an address part.
@@ -103,3 +102,9 @@ __Types of Registers__
 
 ---
 ### Computer Instructions
+---
+### Instruction Cycles
+
+---
+### Complete computer description
+
