@@ -31,6 +31,12 @@ __Learning Outcomes__
 
 ---
 ### Euclidean Algorithm
+gdc(252,198) = 18
+252 = 1 . 198 + 54  
+198 = 3 . 54 + 36  
+54 = 1 . 36 + 18  
+36 = 2 . 18
+![[EuclidAlgorithm.jpg | 300]]
 
 ---
 ### Factorization of integers
