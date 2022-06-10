@@ -18,3 +18,19 @@ __Learning Outcomes__
 • Solve and practice computer arithmetic algorithms
 
 ---
+### Addressing Modes
+- Addressing modes specifies the way, the effective address of an operand is represented in the instruction. Some addressing mode efficiently allows referring to a large range of area like a linear array of addresses and list of addresses. Addressing mode describes a flexible and efficient way to define complex effective address
+
+__Types of Addressing Modes__
+1. Register Addressing Mode  
+2. Direct Addressing Mode  
+3. Immediate Addressing Mode  
+4. Register Indirect Addressing Mode  
+5. Index Addressing Mode  
+6. Auto Increment Mode  
+7. Auto Decrement Mode  
+8. Relative Addressing Mode
+
+---
+### Parallel processing
+

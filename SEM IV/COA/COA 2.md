@@ -7,10 +7,14 @@
 - memory-references instructions
 - input-output and interrupt
 - complete computer description. 
-- Design of the basic computer, design of accumulator logic.  
+- Design of the basic computer
+- design of accumulator logic.  
 
-__Micro programmed Control:__ Control memory, address sequencing, micro program example,  
-design of control unit.
+__Micro programmed Control:__ 
+- Control memory
+- address sequencing
+- micro program example
+- design of control unit
 
 __Learning Outcomes:__ 
 • Learn different types of memory-reference instructions
@@ -21,13 +25,14 @@ __Learning Outcomes:__
 __Instruction code:__ A group of bits that instruct the computer  to perform a specific operation. It is divided into 2 parts: Opcode and Operand/address
 
 __Instruction Format__
-4096(address lines) x 16(opcode) -> 2^12 + 2^4 -> 16 bit memory word
-0-11 bits -> Operand/address
-12-15 -> Opcode
+4096 x 16 ->16 bit memory word
+12 bits -> 2^12 words (4096)
+3 bits -> 2^3 -> 8 operations
+1 bit -> 0(Direct) or 1(Indirect)
 
-|opcode|operand|
-|-|-|
-|15-12 (3 bits)|11-0 (12 bits)|
+|Indirect bit|opcode|Address|
+|-|-|-|
+|15 = 1 or 0|14-12 (3 bits)|11-0 (12 bits)|
 
 __Operation Code(opcode)__
 - A group of bits that define the operation
@@ -47,8 +52,8 @@ __Types of instructions__
 
 __Types of opcode/address__
 - Immediate address (actual operand)
-- Direct address (address that points to operand) [15bit -> 0]
-- Indirect address (address of memory word which points to operand address) [15bit -> 1]
+- Direct address (address points to operand) [I -> 0]
+- Indirect address (address of memory word which points to operand address) [I -> 1]
 
 #### Problem
 A computer uses a memory unit with 256k words of 32 bit each. A binary instruction code is stored in one word of memory. The instruction has four parts: an indirect bit. an operation code, a register code part to specify one of 64 registers, and an address part.
@@ -108,5 +113,9 @@ __Types of Registers__
 
 
 ---
+### Memory-references instructions
+
+---
 ### Complete computer description
+![[Pasted image 20220609214415.png | 500]]
 
