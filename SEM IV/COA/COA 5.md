@@ -19,7 +19,7 @@
 
 ---
 ### Associative Memories
-- An associative memory can be considered as a memory unit whose stored data can be identified for access by the content of the data itself rather than by an address or memory location. This type of search _helps in reducing the search time by a large extent_.
+- An associative memory can be considered as a memory unit whose stored data can be identified for _access by the content of the data itself rather than by an address or memory location_. This type of search _helps in reducing the search time by a large extent_.
 - It is also known as _Content Addressable Memory(CAM)_.
 
 __Working of Associative Memory__  
@@ -31,7 +31,7 @@ __Working of Associative Memory__
 ![[coa-associative-memory.png | 400]]
 - An associative memory consists of a _memory array and logic for 'm' words with 'n' bits per word_.
 - The functional registers like the argument register **A** and key register **K** each have **n** bits, one for each bit of a word. The match register **M** consists of **m** bits, one for each memory word.
-- The words which are kept in the memory are compared in parallel with the content of the argument register.
+- The words which are kept in the memory are _compared in parallel with the content of the argument register_.
 
 __Associative memory organization__
 - memory array
@@ -39,11 +39,16 @@ __Associative memory organization__
 - Several registers like input register, mask register, select register and output register.
 
 __Argument Register (A):__ It contains the word to be searched
+
 __Key Register (K):__ It specifies which part of the argument needs to be compared with words in the memory.
 - If all bits are set '1' then entire word needs to compared else only the bits having '1' will be compared.
+
 __Associative Memory Array:__ It contains the words which are to be compared with the argument word. 
+
 __Match Register (M):__ After matching process, the bits corresponding to matching words are set '1' in match register.
+
 __Input Register:__ It holds data that is to be written into associative memory.
+
 __Output Register (Y):__ It contains the matched data word that is retrieved from associative memory
 
 ![[coa-associative-memory2.png | 400]]
