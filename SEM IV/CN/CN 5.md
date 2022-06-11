@@ -154,7 +154,6 @@ __Pure ALOHA__
 - Since _different stations wait for different amount of time_, the _probability of further collision is decreased_.
 - The _throughput is maximized when frames are of uniform length_
 - When _two frames try to occupy the channel at the same time_, there will be a _collision and both will be garbled_
-- 
 
 ![[Pasted image 20220611200059.png | 500]]
 
@@ -164,10 +163,27 @@ __Slotted ALOHA__
 - _Sending of data is only allowed at beginning of these time slots._
 - If a station misses out the allowed time, it _must wait for the next slot_. This reduces the probability of collision
 
-![500](slotted aloha.png)
+![500](slotted-aloha.png)
 
 __Carrier Sense Multiple Access Protocol (CSMA)__
--  
+-  CSMA developed to _minimize the chance of collision and increase the performance_
+- Principle of CSMA - _"Sense before transmit" or "listen before talk"_
+- If _channel sensed idle: transmit entire frame_
+- If _channel sensed busy: defer transmission_
+- Still there's possibility of _collision because of propagation delay_
+- __Types of CSMA__
+	- 1-Persistent CSMA
+	- P-Persistent CSMA
+	- Non-Persistent CSMA
+	- O-Persistent CSMA
+
+__CSMA with collision detection CSMA/CD__
+- Collision _detected within short time_
+- _Colliding transmission aborted, reducing channel wastage_
+- Collision _detection easy in wired, difficult with wireless_
+
+__CSMA with collision Avoidance CSMA/CA__
+- 
 
 #### Switched Local Area Networks
 ---
