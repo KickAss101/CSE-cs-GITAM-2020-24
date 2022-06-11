@@ -95,15 +95,32 @@ __Types of Multiple Access Protocols__
 - Taking-Turns Protocols
 
 #### Channel Partitioning Protocols
-- 
+- Divides channel into smaller pieces (Time slots, frequency slots, code slots)
+- Allocate piece to node for exclusive use
 
 __Time Division Multiple Access (TDMA)__
+- Access to the channel is _divided into rounds_
+- _Each station gets fixed time slot_
+- Unused slots go idle
+- Suppose the _channel supports N nodes_ and _transmission rate of the channel is R bps_
+- TDM divides _time into time frames_ and further divides each _time frame into N time slots_
+- Then, _each of the slot is assigned to one of the N nodes_.
+
+![[Pasted image 20220611172157.png | 500]]
+
+- Example: 6-station LAN. 1,3,4 have packet, slots 2, 5 & 6 are idle.
+
+__Drawbacks of TDMA__
+- A node is _limited to R/N bps_ even when it is the only node with packets to send
+- A node must always wait for it's turn in the _transmission sequence_ again, even when it is the only node with a frame to send.
+
+__Frequency Division Access (FDMA)__
 - 
 
 #### Taking-Turns Protocols
 
 #### Random Access Protocols
-
+- 
 
 
 
