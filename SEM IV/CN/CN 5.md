@@ -64,7 +64,7 @@ __The data link layer does the following:__
 		- _Communicates directly with the physical layer_
 		- The MAC sublayer also provides media access control, allowing multiple devices to communicate over a shared (half-duplex) medium. Full-duplex communications do not require access control.
 
-![[Pasted image 20220610225306.png | 500]]
+![500](link-layer-0.png)
 
 __At each hop along the path, a router performs the following Layer 2 functions__
 1.  Accepts a frame from a medium
@@ -94,8 +94,10 @@ __Types of Multiple Access Protocols__
 - Random Access Protocols
 - Taking-Turns Protocols
 
+![[Pasted image 20220611190226.png | 500]]
+
 #### Channel Partitioning Protocols
-- Divides channel into smaller pieces (Time slots, frequency slots, code slots)
+- _Divides channel into smaller pieces_ (Time slots, frequency slots, code slots)
 - Allocate piece to node for exclusive use
 
 __Time Division Multiple Access (TDMA)__
@@ -105,6 +107,7 @@ __Time Division Multiple Access (TDMA)__
 - Suppose the _channel supports N nodes_ and _transmission rate of the channel is R bps_
 - TDM divides _time into time frames_ and further divides each _time frame into N time slots_
 - Then, _each of the slot is assigned to one of the N nodes_.
+- Examples: 2G cellular networks
 
 ![[Pasted image 20220611172157.png | 500]]
 
@@ -115,14 +118,56 @@ __Drawbacks of TDMA__
 - A node must always wait for it's turn in the _transmission sequence_ again, even when it is the only node with a frame to send.
 
 __Frequency Division Access (FDMA)__
-- 
+- Channel spectrum is _divided into frequency bands_.
+- _Each station assigned to a fixed frequency band_
+- _Unused transmission time in frequency bands go idle_
+- Example: 6-station LAN, 1,3,4 have packets. Frequency bands 2,5,6 idle
+- Examples: Walkie-Talkies
 
-#### Taking-Turns Protocols
+![[Pasted image 20220611182936.png | 500]]
+
+__Drawbacks of FDMA__
+- _Unused portions of spectrum will be wasted_
+- If more than N Users want to communicate, _some of them will be denied permission_, if some users with allocated frequency hardly ever transmit anything
+
+__Code Division Multiple Access__
+- CDMA assigns a different _code to each node_.
+- Each _node uses it's unique code to encode the data_ bits it sends.
+- Different _nodes can transmit simultaneously_.
+- Their respective _receiver receives a sender's encoded data bits correctly_ in spite of interfering transmissions by other nodes
+- Example: Military and widespread civilian use, BSNL CDMA service
+
+![500](Figure-CDMA-Example-In-above-figure-three-users-A-B-C-communication-with-receiver.png)
+
+#### Taking-Turns Protocols or Controlled Access Protocols
+- 
 
 #### Random Access Protocols
+- All _stations have same superiority_. Any station can send data _depending on medium's state_ (idle/busy)
+- Each station has the _right to the medium without being controlled by any other station_
+- If more than one station tires to send, there is an access conflict (collision) and frames will be either destroyed or modified.
+
+__Pure ALOHA__
+- Pure ALOHA _allows stations to transmit whenever they have data to be sent_.
+- When a station sends data it waits for an acknowledgment
+- If _acknowledgment doesn't come_ within the allotted time then the _station waits for a random amount of time called back-off time_ (tb) and re-send the data
+- Since _different stations wait for different amount of time_, the _probability of further collision is decreased_.
+- The _throughput is maximized when frames are of uniform length_
+- When _two frames try to occupy the channel at the same time_, there will be a _collision and both will be garbled_
 - 
 
+![[Pasted image 20220611200059.png | 500]]
 
+__Slotted ALOHA__
+-  It was _developed to improve the efficiency of pure ALOHA_ as the chances of collision are higher in pure ALOHA
+- Time of the shared channel is divided into _discrete time intervals called slots_
+- _Sending of data is only allowed at beginning of these time slots._
+- If a station misses out the allowed time, it _must wait for the next slot_. This reduces the probability of collision
+
+![500](slotted aloha.png)
+
+__Carrier Sense Multiple Access Protocol (CSMA)__
+-  
 
 #### Switched Local Area Networks
 ---
