@@ -84,7 +84,7 @@ __At each hop along the path, a router performs the following Layer 2 functions_
 		- Ex: Ethernet, 4G, 5G, Wi-Fi, satellite
 
 #### Multiple Access Protocols
-- The need for _Multiple Access Protocols_:
+- The __need__ for Multiple Access Protocols:
 	- _Collision takes place if a node receives two or more signals at the same time_
 - __Multiple access protocol__ is a distributed algorithm that _determines how nodes share channel_ i.e., determine when node can transmit
 - _Communication about channel sharing must use channel itself_, no out-of-band channel for coordination
