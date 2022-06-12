@@ -2,7 +2,7 @@
 - Introduction to the Link Layer
 - Multiple Access Links and Protocols
 - Switched Local Area Networks  
-
+ 
 ## Wireless and Mobile Networks
 - Introduction
 - Wireless Links and Network Characteristics
