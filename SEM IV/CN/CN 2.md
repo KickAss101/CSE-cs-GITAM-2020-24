@@ -20,6 +20,7 @@ __Learning Outcomes__
 - Application layer protocol
 
 __Network Application Architecture__
+
 Types of Network Application Architecture
 - Client-Server
 - Peer-to-Peer
