@@ -86,7 +86,7 @@ __Disadvantages__
 
 __Advantages__
 -   _Network traffic reduces due to the division between clients and the server._
--   _Less expensive to set up and maintain._
+-   _Resource sharing._
 
 __Disadvantages__
 -   Failure of any node in a system affects the whole system.
