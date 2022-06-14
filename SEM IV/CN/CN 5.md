@@ -16,11 +16,10 @@ __Learning Outcomes__
 
 ---
 ### Various IEEE standards
-- IEEE 802 - 
-- IEEE 802.2 -
-- IEEE 802.3 -
-- IEEE 802.11 - 
-- IEEE 802.15 -
+- IEEE 802 - Collection of networking standards that cover the physical and data-link layer specifications for technologies such as Ethernet and wireless.
+- IEEE 802.3 - Ethernet Working Group
+- IEEE 802.11 - Wireless LAN Working Group
+- IEEE 802.15 - Wireless Specialty Network (WSN) Working Group
 
 ---
 ### The Link Layer
