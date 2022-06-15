@@ -1,13 +1,14 @@
-- __First-Order Logic__ 
-	- Representation Revisited
-	- Syntax and Semantics of First-Order Logic
-	- Using First-Order Logic.  
-- __Inference in First-Order Logic__
-	- Propositional vs. First-Order Inference
-	- Unification and Lifting
-	- Forward Chaining
-	- Backward Chaining
-	- Resolution
+__First-Order Logic__ 
+- Representation Revisited
+- Syntax and Semantics of First-Order Logic
+- Using First-Order Logic.  
+	
+__Inference in First-Order Logic__
+- Propositional vs. First-Order Inference
+- Unification and Lifting
+- Forward Chaining
+- Backward Chaining
+- Resolution
 
 __Learning Outcomes__
 - define knowledge-based agents
